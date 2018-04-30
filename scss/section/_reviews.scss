@@ -18,7 +18,8 @@
   height: 50%;
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
-  transition: .5s;
+  -webkit-transition: all .5s;
+  transition: all .5s;
   position: relative;
   &:hover {
     -webkit-filter: grayscale(0);
@@ -35,8 +36,16 @@
 .reviews__description {
   position: absolute;
   color: $white;
-  top: 10%;
-  left: 5%;
+  top: 0;
+  left: 9999px;
+  bottom: 0;
+  right: 0;
+  padding: 10% 5%;
+}
+.reviews__item:hover .reviews__description{
+  left: 0;
+  -webkit-transition: all .3s;
+  transition: all .3s;
 }
 
 .reviews__header {
