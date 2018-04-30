@@ -1,0 +1,49 @@
+.best {
+  background-image: url('../img/bg/best-bg.png');
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.best__container {
+  padding: 5% 0;
+}
+
+.section__title--best {
+  color: #2f3234;
+  padding: 0;
+  margin-bottom: rem(60px);
+}
+
+.best__list {
+  display: flex;
+}
+
+.best__item {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding-top: rem(120px);
+  flex: 1;
+}
+
+@each $browser in meat, hand, natural {
+  .best__item_#{$browser} {
+    background: url(../img/content/best/icons/#{$browser}.png) top center no-repeat;
+  }
+}
+
+.best__item-header {
+  font-family: Lifehack;
+  font-size: 24px;
+  color: $dark;
+}
+
+.best__item-description {
+  font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
+  font-size: .9rem;
+  color: lighten($dark, 40%);
+}

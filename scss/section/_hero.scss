@@ -1,0 +1,133 @@
+.hero {
+  background-image: url('../img/bg/hero_bg.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+}
+
+.header__logo {
+  margin-right: auto;
+}
+
+.logo {
+  display: block;
+}
+
+// антипаттерн
+.nav {
+  margin-right: rem(15px);
+}
+
+.nav__list {
+  margin: 0;
+  padding: 0;
+}
+
+.nav__item {
+  display: inline-block;
+  vertical-align: middle;
+  white-space: nowrap;
+  &:after {
+    display: inline-block;
+    vertical-align: middle;
+    content: ' ';
+    @include circle(5px, #fff);
+    margin: 0 12px;
+  }
+  &:last-child:after {
+    display: none;
+  }
+}
+
+.nav__link {
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.42;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+  vertical-align: middle;
+  border-bottom: 1px solid transparent;
+  opacity: .7;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  &:hover {
+    border-bottom: 1px solid $white;
+    opacity: 1;
+  }
+}
+
+.hero__container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.hero__content {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  align-items: center;
+  padding-bottom: 15%;
+}
+
+.hero__img, .hero__description {
+  flex-basis: 50%;
+  display: flex;
+}
+
+.hero__description {
+  flex-direction: column;
+  justify-content: center;
+}
+
+.section__title {
+  color: #f9b43b;
+  font-family: 'Gagalin';
+  font-size: rem(72px);
+  font-weight: 300;
+  line-height: 1.42;
+  margin: 0;
+  padding-top: 60px;
+}
+
+%test {
+  color: white;
+}
+
+.hero__description-text {
+  color: #ffffff;
+  font-family: 'Lifehack';
+  font-size: rem(65px);
+  font-weight: 400;
+  line-height: 1;
+  @extend %test;
+}
+
+.hero__arrow-scroll {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(50%);
+  opacity: .7;
+  -webkit-transition: opacity .5s;
+  transition: opacity .5s;
+  &:hover {
+    opacity: 1;
+  }
+}
+
