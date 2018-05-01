@@ -68,7 +68,7 @@
     position: absolute;
     bottom: 50%;
     right: 50%;
-    transform: translate(15%, 15%);
+    transform: translate(50%, 50%);
     -webkit-transition: .5s;
     transition: .5s;
   }
@@ -83,6 +83,10 @@
     height: 5px;
     background: $white;
     border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }
 .nav-sidebar__link_active:before{
@@ -95,7 +99,7 @@
   position: absolute;
   bottom: 50%;
   right: 50%;
-  transform: translate(15%, 15%);
+  transform: translate(50%, 50%);
   -webkit-transition: .5s;
   transition: .5s;
 }

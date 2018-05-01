@@ -21,9 +21,12 @@
   -webkit-transition: all .5s;
   transition: all .5s;
   position: relative;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
   &:hover {
-    -webkit-filter: grayscale(0);
-    filter: grayscale(0);
+    -webkit-filter: grayscale(50%);
+    filter: grayscale(50%);
   }
 }
 
@@ -35,17 +38,19 @@
 
 .reviews__description {
   position: absolute;
+  background: rgba(#000000, .7);
   color: $white;
   top: 0;
-  left: 9999px;
+  left: 0;
   bottom: 0;
   right: 0;
   padding: 10% 5%;
+  opacity: 0;
 }
 .reviews__item:hover .reviews__description{
-  left: 0;
-  -webkit-transition: all .3s;
-  transition: all .3s;
+  opacity: 1;
+  -webkit-transition: all .5s;
+  transition: all .5s;
 }
 
 .reviews__header {
@@ -63,4 +68,10 @@
 
 .reviews__btn {
   margin-top: 10%;
+}
+.btn-link_reviews{
+  background: $dark;
+    &:hover{
+      background-color: darken($dark, 7%);
+    }
 }

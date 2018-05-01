@@ -1,5 +1,5 @@
 .best {
-  background-image: url('../img/bg/best-bg.png');
+  background-image: url('../img/bg/best_bg.jpg');
   background-repeat: no-repeat;
   background-position: center bottom;
   background-size: cover;
@@ -12,7 +12,7 @@
 
 }
 
-.section__title--best {
+.section__title_best {
   color: #2f3234;
   padding: 0;
   margin-bottom: rem(60px);
@@ -30,9 +30,9 @@
   flex: 1;
 }
 
-@each $browser in meat, hand, natural {
-  .best__item_#{$browser} {
-    background: url(../img/content/best/icons/#{$browser}.png) top center no-repeat;
+@each $img in meat, hand, natural {
+  .best__item_#{$img} {
+    background: url(../img/content/best/icons/#{$img}.png) top center no-repeat;
   }
 }
 

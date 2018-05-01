@@ -124,7 +124,7 @@ ul {
     position: absolute;
     bottom: 50%;
     right: 50%;
-    transform: translate(15%, 15%);
+    transform: translate(50%, 50%);
     -webkit-transition: .5s;
     transition: .5s; }
   .nav-sidebar__link:hover:before {
@@ -135,7 +135,11 @@ ul {
     width: 5px;
     height: 5px;
     background: #ffffff;
-    border-radius: 50%; }
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
 
 .nav-sidebar__link_active:before {
   content: "";
@@ -147,12 +151,12 @@ ul {
   position: absolute;
   bottom: 50%;
   right: 50%;
-  transform: translate(15%, 15%);
+  transform: translate(50%, 50%);
   -webkit-transition: .5s;
   transition: .5s; }
 
 .hero {
-  background-image: url("../img/bg/hero_bg.png");
+  background-image: url("../img/bg/hero_bg.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -266,7 +270,7 @@ ul {
     opacity: 1; }
 
 .best {
-  background-image: url("../img/bg/best-bg.png");
+  background-image: url("../img/bg/best_bg.jpg");
   background-repeat: no-repeat;
   background-position: center bottom;
   background-size: cover;
@@ -274,7 +278,7 @@ ul {
   justify-content: center;
   align-items: center; }
 
-.section__title--best {
+.section__title_best {
   color: #2f3234;
   padding: 0;
   margin-bottom: 3.75rem; }
@@ -327,10 +331,13 @@ ul {
   filter: grayscale(100%);
   -webkit-transition: all .5s;
   transition: all .5s;
-  position: relative; }
+  position: relative;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat; }
   .reviews__item:hover {
-    -webkit-filter: grayscale(0);
-    filter: grayscale(0); }
+    -webkit-filter: grayscale(50%);
+    filter: grayscale(50%); }
 
 .reviews__img {
   display: flex;
@@ -339,17 +346,19 @@ ul {
 
 .reviews__description {
   position: absolute;
+  background: rgba(0, 0, 0, 0.7);
   color: #ffffff;
   top: 0;
-  left: 9999px;
+  left: 0;
   bottom: 0;
   right: 0;
-  padding: 10% 5%; }
+  padding: 10% 5%;
+  opacity: 0; }
 
 .reviews__item:hover .reviews__description {
-  left: 0;
-  -webkit-transition: all .3s;
-  transition: all .3s; }
+  opacity: 1;
+  -webkit-transition: all .5s;
+  transition: all .5s; }
 
 .reviews__header {
   font-family: Gagalin;
@@ -364,5 +373,10 @@ ul {
 
 .reviews__btn {
   margin-top: 10%; }
+
+.btn-link_reviews {
+  background: #2f3234; }
+  .btn-link_reviews:hover {
+    background-color: #1e2021; }
 
 /*# sourceMappingURL=main.css.map */
