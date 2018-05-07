@@ -8,6 +8,12 @@
   }
 }
 
+.order__container{
+  @include tablets{
+    width: 90%;
+  }
+}
+
 .order__form {
   margin-left: -5%;
   display: flex;

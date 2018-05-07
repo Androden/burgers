@@ -31,6 +31,28 @@
     order: 2;
     margin-right: 0;
     margin-left: rem(15px);
+    position: relative;
+    &:after{
+      content: "";
+      display: block;
+      width: 24px;
+      height: 22px;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      background: $black;
+      cursor: pointer;
+      opacity: .4;
+      -webkit-transition: all .3s;
+      -moz-transition: all .3s;
+      -ms-transition: all .3s;
+      -o-transition: all .3s;
+      transition: all .3s;
+    }
+    &:hover:after{
+      opacity: 0;
+    }
   }
 }
 

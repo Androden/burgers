@@ -1,5 +1,4 @@
 .team{
-  height: 100%;
   background: url("../img/bg/team_bg.jpg") center center no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
@@ -66,6 +65,7 @@
   display: inline-flex;
   font:rem(14px) Gagalin;
   margin-bottom: rem(15px);
+  position: relative;
   &::after{
     content: "";
     display: block;
@@ -101,6 +101,9 @@
 }
 .team__item-description{
   margin-left: rem(20px);
+  @include tablets{
+    margin-left:0;
+  }
 }
 .team__item-post{
   font-weight: 700;
