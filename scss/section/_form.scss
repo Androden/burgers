@@ -140,7 +140,7 @@
   .order__radio-elem:checked {
     &+.order__radio-fake {
       &:after {
-        background: url("../img/icons/check.svg") 50% no-repeat transparent;
+        background: url("../img/content/form/check_icon.png") 50% no-repeat transparent;
         background-size: contain;
         width: rem(11px);
         height: rem(9px);

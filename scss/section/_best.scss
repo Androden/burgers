@@ -40,13 +40,17 @@
 }
 
 
-.best__title {
+.section__title_black {
+  color: $dark;
+  margin-bottom: rem(50px);
+}
+.best__title{
   font-family: Lifehack;
   font-size: rem(24px);
-  color: $dark;
-  margin-bottom: rem(20px);
-}
 
+  @include tablets{font-size: rem(22px)}
+  @include phones{font-size: rem(20px)}
+}
 .best__text {
   font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
   font-size: .9rem;

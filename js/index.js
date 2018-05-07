@@ -37,3 +37,13 @@ var aa
 if (10>100){
     aa = 10;
 }
+
+//let - НЕ высплающий var, работает только внутри видимой области
+if (10>1){
+    let a = 10;
+    console.log(a);
+}//console.log(a);
+
+// const – let, которые нельзя перезначить
+const b =10; console.log(b);
+//const b=200; console.log(b);

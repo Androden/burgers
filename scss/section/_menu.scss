@@ -13,6 +13,9 @@
 .menu__title {
   padding-left: 10%;
   width: 30%;
+  @include tablets{
+    padding-left: 1%;
+  }
 }
 .menu__accordeon{
   position:absolute;
@@ -32,6 +35,8 @@
 
 .menu__item-header {
   width: 100%;
+  display: block;
+  text-decoration: none;
   max-width: rem(80px);
   position: relative;
   transition: all .5s;

@@ -4,7 +4,7 @@
   background: url("../img/bg/footer_bg.jpg") center center no-repeat;
   background-size: cover;
   display: flex;
-  @include tablets{
+  @include tablets {
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -12,11 +12,20 @@
   }
 }
 
+.footer__container {
+  display: flex;
+  flex-direction: row;
+
+  @include tablets{
+    flex-direction: column;
+  }
+}
+
 .footer__left, .footer__right {
   width: 50%;
   display: flex;
   margin: rem(5px) rem(14px);
-  @include tablets{
+  @include tablets {
     width: 100%;
     justify-content: center;
     text-align: center;
@@ -24,13 +33,11 @@
 }
 
 .footer__left {
-
 }
 
-.footer__right{
-
-  justify-content: flex-end;
+.footer__right {
 }
+
 .footer__contacts {
   font: 300 rem(14px) 'Ubuntu';
 }
@@ -55,35 +62,34 @@
   }
 }
 
-.socials{
-  display: flex;
-  justify-content: space-around;
-  width: 50%;
-}
-
 .social-icon, .social-icon__list {
   height: 100%;
   width: 100%;
 }
 
-.social-icon{
+.social-icon {
   display: flex;
   justify-content: flex-end;
-  @include tablets{
+  &:hover {
+    fill: $white;
+    strike: $white;
+  }
+  @include tablets {
     justify-content: center;
   }
 }
 
-.social-icon__list {
+.socials {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  @include tablets{
+  @include tablets {
     justify-content: center;
   }
 }
 
-.social-icon__item {
+.socials__item {
+  margin-right: rem(20px);
   opacity: .3;
   -webkit-transition: all .5s;
   -moz-transition: all .5s;
@@ -95,7 +101,7 @@
   }
 }
 
-.social-icon__item-link {
+.socials__link {
   display: block;
   width: 22px;
   height: 22px;
