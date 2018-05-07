@@ -50,7 +50,7 @@
   font: rem(40px) 'Gagalin';
   color: $white;
   transform: rotate(-90deg);
-  margin-top: -125%;
+  transform-origin: rem(-20px) rem(-35px);
   white-space: nowrap;
 }
 

@@ -17,9 +17,6 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  @include tablets{
-    max-width: 0;
-  }
 }
 
 .section {
@@ -27,6 +24,10 @@
   background-color: rgba(0, 0, 0, 0.31);
   min-width: 940px;
   min-height: 650px;
+  height: 100vh;
+  @include tablets{
+    min-width: 0;
+  }
 }
 
 .btn-link {

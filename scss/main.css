@@ -86,15 +86,16 @@ ul {
   justify-content: center;
   align-items: center;
   flex-direction: column; }
-  @media screen and (max-width: 768px) {
-    .container {
-      max-width: 0; } }
 
 .section {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.31);
   min-width: 940px;
-  min-height: 650px; }
+  min-height: 650px;
+  height: 100vh; }
+  @media screen and (max-width: 768px) {
+    .section {
+      min-width: 0; } }
 
 .btn-link {
   min-width: 6.125rem;
@@ -466,7 +467,8 @@ ul {
     .team__item {
       display: inline-flex;
       text-align: center;
-      flex-direction: column; } }
+      flex-direction: column;
+      align-items: center; } }
 
 .team__item_active .team__item-header {
   color: #f8b43a; }
@@ -575,7 +577,7 @@ ul {
   font: 2.5rem "Gagalin";
   color: #ffffff;
   transform: rotate(-90deg);
-  margin-top: -125%;
+  transform-origin: -1.25rem -2.1875rem;
   white-space: nowrap; }
 
 .menu__item-header_meat {
