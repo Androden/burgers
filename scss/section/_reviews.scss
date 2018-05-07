@@ -16,6 +16,12 @@
 .reviews__item {
   width: 25%;
   height: 50%;
+
+  @include tablets{
+    width: 50%;
+    height: 25%;
+  }
+
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
   -webkit-transition: all .5s;

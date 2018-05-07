@@ -1,8 +1,5 @@
 .hero {
-  background-image: url('../img/bg/hero_bg.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  background: url('../img/bg/hero_bg.jpg') center center / cover no-repeat;
   position: relative;
 }
 
@@ -11,7 +8,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 10px;
+  padding-top: rem(10px);
+
 }
 
 .header__logo {
@@ -25,11 +23,24 @@
 // антипаттерн
 .header__menu {
   margin-right: rem(15px);
+
+  @include tablets{
+    width: 24px;
+    height: 22px;
+    background: url("../img/content/hero/navicon.png") center center / cover no-repeat;
+    order: 2;
+    margin-right: 0;
+    margin-left: rem(15px);
+  }
 }
 
 .nav__list {
   margin: 0;
   padding: 0;
+  @include tablets{
+  height: 0;
+    overflow: hidden;
+  }
 }
 
 .nav__item {
@@ -41,7 +52,7 @@
     vertical-align: middle;
     content: ' ';
     @include circle(5px, #fff);
-    margin: 0 12px;
+    margin: 0 rem(12px);
   }
   &:last-child:after {
     display: none;
@@ -50,19 +61,19 @@
 
 .nav__link {
   color: #ffffff;
-  font-size: 13px;
+  font-size: rem(13px);
   font-weight: 400;
   line-height: 1.42;
   text-transform: uppercase;
   text-decoration: none;
   display: inline-block;
   vertical-align: middle;
-  border-bottom: 1px solid transparent;
+  border-bottom: rem(1px) solid transparent;
   opacity: .7;
   -webkit-transition: all .5s;
   transition: all .5s;
   &:hover {
-    border-bottom: 1px solid $white;
+    border-bottom: rem(1px) solid $white;
     opacity: 1;
   }
 }
@@ -70,6 +81,7 @@
 .hero__container {
   height: 100%;
   display: flex;
+  flex: 1;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -83,6 +95,30 @@
   flex-grow: 1;
   align-items: center;
   padding-bottom: 10%;
+
+  @include tablets {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 20%;
+  }
+}
+
+.hero__left,
+.hero__right {
+  float: left;
+  width: 50%;
+  @include tablets() {
+    float: none;
+    width: auto;
+  }
+}
+
+.hero__right {
+  padding-top: rem(115px);
+  @include tablets() {
+    padding-top: 0;
+  }
 }
 
 .hero__img, .hero__description {
@@ -102,7 +138,7 @@
   font-weight: 300;
   line-height: 1.42;
   margin: 0;
-  padding-top: 60px;
+  padding-top: rem(60px);
 }
 
 %test {

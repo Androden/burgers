@@ -1,0 +1,82 @@
+.menu {
+  height: 100%;
+  background: url("../img/bg/menu_bg.jpg") center center no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  position: relative;
+}
+
+.menu__content{
+  display: flex;
+  height: 100%;
+}
+
+.menu__title {
+  padding-left: 10%;
+  width: 30%;
+}
+.menu__accordeon{
+  position:absolute;
+  width: 70%;
+  top: 0;
+  bottom: 0;
+  right: 0;
+}
+.menu__list{
+  display: flex;
+  height: 100%;
+  justify-content: flex-end;
+}
+.menu__item {
+  display: flex;
+}
+
+.menu__item-header {
+  width: 100%;
+  max-width: rem(80px);
+  position: relative;
+  transition: all .5s;
+  -webkit-transition: all .5s;
+
+  &:before{
+    content: "";
+    display: block;
+    background: rgba($dark, .7);
+    height: 100%;
+    width: 100%;
+  }
+}
+.menu__item-header-text{
+  font: rem(40px) 'Gagalin';
+  color: $white;
+  transform: rotate(-90deg);
+  margin-top: -125%;
+  white-space: nowrap;
+}
+
+@each $bg-img-menu in meat, vegan, diet {
+  .menu__item-header_#{$bg-img-menu} {
+    background: url(../img/content/menu/item_bg/#{$bg-img-menu}_bg.jpg) top center no-repeat;
+    background-size: cover;
+  }
+}
+
+.menu__item-description{
+  width: 0;
+  overflow: hidden;
+  transition: all .5s;
+  -webkit-transition: all .5s;
+}
+
+.menu__item_active{
+  & .menu__item-header-text{
+    color: $yellow;
+  }
+  & .menu__item-description{
+    width: 100%;
+    background: rgba($dark, .93);
+    color: $white;
+    font: 300 rem(14px) 'Ubuntu';
+    padding: 10% 5%;
+  }
+}

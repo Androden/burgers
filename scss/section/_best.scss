@@ -1,15 +1,15 @@
 .best {
-  background-image: url('../img/bg/best_bg.jpg');
-  background-repeat: no-repeat;
-  background-position: center bottom;
-  background-size: cover;
+  background: url('../img/bg/best_bg.jpg') center center / cover no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
-.best__container {
-
+.best__icon-pic {
+  width: 90%;
+  height: rem(100px);
+  svg {
+    max-width: 95%;
+  }
 }
 
 .section__title_best {
@@ -20,29 +20,34 @@
 
 .best__list {
   display: flex;
+
+  @include phones {
+    flex-direction: column;
+  }
 }
 
 .best__item {
   display: flex;
   flex-direction: column;
   text-align: center;
-  padding-top: rem(120px);
+  margin-bottom: rem(50px);
+  padding: 0 rem(15px);
   flex: 1;
-}
 
-@each $img in meat, hand, natural {
-  .best__item_#{$img} {
-    background: url(../img/content/best/icons/#{$img}.png) top center no-repeat;
+  @include phones {
+    flex-direction: row;
   }
 }
 
-.best__item-header {
+
+.best__title {
   font-family: Lifehack;
-  font-size: 24px;
+  font-size: rem(24px);
   color: $dark;
+  margin-bottom: rem(20px);
 }
 
-.best__item-description {
+.best__text {
   font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
   font-size: .9rem;
   color: lighten($dark, 40%);

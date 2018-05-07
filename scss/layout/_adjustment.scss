@@ -1,6 +1,7 @@
 .wrapper {
   width: 100%;
-  height: 100%;
+  min-height: 100%;
+  overflow: hidden;
 }
 
 .maincontent {
@@ -9,12 +10,16 @@
 }
 
 .container {
-  width: 940px;
+  max-width: 940px;
+  width: 95%;
   margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  @include tablets{
+    max-width: 0;
+  }
 }
 
 .section {
@@ -51,6 +56,9 @@
 
 .nav-sidebar__item {
   margin-top: 5px;
+  &:first-child{
+    margin-top: 0;
+  }
 }
 
 .nav-sidebar__link {
@@ -86,6 +94,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
+    -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
   }
 }

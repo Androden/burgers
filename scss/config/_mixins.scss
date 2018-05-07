@@ -5,6 +5,12 @@
   background-color: $color;
 }
 
+@mixin cover(){
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
 //responsive
 @function rem($px) {
   @return $px / 16px+0rem;
