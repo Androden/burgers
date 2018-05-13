@@ -11,4 +11,3 @@ let currentRight = 0;
 
 carouselList.style.right=currentRight;
 console.log(currentRight);
-

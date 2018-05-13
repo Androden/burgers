@@ -1,0 +1,121 @@
+.menu-burger {
+  background: rgb(249, 180, 59); /* Old browsers */
+  background: -moz-linear-gradient(top, rgba(249, 180, 59, 1) 0%, rgba(250, 180, 59, 1) 27%, rgba(246, 173, 60, 1) 32%, rgba(245, 172, 57, 1) 32%, rgba(247, 171, 59, 1) 33%, rgba(244, 166, 58, 1) 36%, rgba(242, 163, 58, 1) 36%, rgba(244, 163, 58, 1) 37%, rgba(239, 155, 57, 1) 40%, rgba(235, 140, 56, 1) 49%, rgba(236, 141, 57, 1) 58%, rgba(234, 142, 55, 1) 60%, rgba(237, 143, 56, 1) 60%, rgba(236, 144, 57, 1) 64%, rgba(245, 167, 59, 1) 84%, rgba(243, 167, 57, 1) 85%, rgba(246, 168, 59, 1) 85%, rgba(247, 176, 60, 1) 92%, rgba(249, 180, 59, 1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(249, 180, 59, 1) 0%, rgba(250, 180, 59, 1) 27%, rgba(246, 173, 60, 1) 32%, rgba(245, 172, 57, 1) 32%, rgba(247, 171, 59, 1) 33%, rgba(244, 166, 58, 1) 36%, rgba(242, 163, 58, 1) 36%, rgba(244, 163, 58, 1) 37%, rgba(239, 155, 57, 1) 40%, rgba(235, 140, 56, 1) 49%, rgba(236, 141, 57, 1) 58%, rgba(234, 142, 55, 1) 60%, rgba(237, 143, 56, 1) 60%, rgba(236, 144, 57, 1) 64%, rgba(245, 167, 59, 1) 84%, rgba(243, 167, 57, 1) 85%, rgba(246, 168, 59, 1) 85%, rgba(247, 176, 60, 1) 92%, rgba(249, 180, 59, 1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(249, 180, 59, 1) 0%, rgba(250, 180, 59, 1) 27%, rgba(246, 173, 60, 1) 32%, rgba(245, 172, 57, 1) 32%, rgba(247, 171, 59, 1) 33%, rgba(244, 166, 58, 1) 36%, rgba(242, 163, 58, 1) 36%, rgba(244, 163, 58, 1) 37%, rgba(239, 155, 57, 1) 40%, rgba(235, 140, 56, 1) 49%, rgba(236, 141, 57, 1) 58%, rgba(234, 142, 55, 1) 60%, rgba(237, 143, 56, 1) 60%, rgba(236, 144, 57, 1) 64%, rgba(245, 167, 59, 1) 84%, rgba(243, 167, 57, 1) 85%, rgba(246, 168, 59, 1) 85%, rgba(247, 176, 60, 1) 92%, rgba(249, 180, 59, 1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f9b43b', endColorstr='#f9b43b', GradientType=0); /* IE6-9 */
+
+  display: flex;
+  align-items: center;
+}
+
+.menu-burger__container {
+
+}
+
+.carousel {
+  display: flex;
+}
+
+.carousel__arrow-left {
+  background: transparent;
+  border: none;
+  &:after{
+    content: "";
+    display: block;
+    width: 15px;
+    height: 25px;
+    background: url("../img/content/menu-burger/arrow-scroll.png") center center;
+  }
+}
+
+.carousel__content {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  position: relative;
+}
+
+.menu-burger__title {
+  color: $white;
+}
+
+.carousel__list{
+  overflow: hidden;
+  display: flex;
+  position: relative;
+}
+
+.carousel__item {
+  display: flex;
+  margin: 0.9375rem;
+  min-width: 100%;
+}
+
+.composition__trigger {
+width: 90px;
+height: 90px;
+display: flex;
+justify-content: center;
+align-items: center;
+border-radius: 6px;
+position: absolute;
+background: #f08c33;
+flex-direction: column;
+}
+
+.composition__trigger-pic {
+max-width: 100%;
+}
+.composition__trigger-text{
+font-size: rem(14px);
+font-family: Gagalin;
+color: $white;
+text-decoration: none;
+}
+.carousel__content-img {
+margin: rem(75px) 0;
+}
+
+.carousel__content-pic {
+max-width: 100%;
+}
+
+.carousel__content-calories {
+position: absolute;
+bottom: 0;
+width: rem(61px);
+height: rem(61px);
+background: url("../img/content/menu-burger/kkal.png");
+text-align: center;
+padding-top: rem(40px);
+font-size: rem(14px);
+font-family: Gagalin;
+color: $white;
+}
+
+.carousel__content-description{
+font-size: rem(14px);
+font-family: Ubuntu;
+color: $white;
+}
+
+.carousel__order{
+//display: flex;
+}
+
+.carousel__order-price{
+font-size: rem(70px);
+font-family: Gagalin;
+color: $orange;
+display: inline-block;
+}
+
+.carousel__order-price span{
+font-size: rem(28px);
+}
+
+.carousel__order-btn{
+margin-left: rem(20px);
+font-size: rem(14px);
+}

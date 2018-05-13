@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+<head>
+   <meta charset="UTF-8">
+   <title>Title</title>
+</head>
+<body>
+<div id="container">
+   <div class="hello">Привет, loftschool</div>
+   <a href="#">Перейти на сайт</a>
+</div>
+<button id="myBtn">клик</button>
+<input type="text" id="phone">
+
+<script>
+    /* Меняем стили
+    const element = document.querySelector('#container');
+    element.style.color = 'red';
+    element.style.fontSize = '20px';*/
+
+    /* Меняем содержиое
+    const element = document.querySelector('.hello');
+    element.textContent='Это новый текст';*/
+
+    /*const element = document.createElement('div');
+    const container=document.querySelector('#container');
+
+    container.appendChild(element);
+    //document.body.appendChild(element);
+    element.textContent='Текст внутри div';
+
+   const element2= document.createElement('span');
+
+   element2.textContent='Текст внутри span';
+   container.appendChild(element2);*/
+
+    const hello = document.querySelector('.hello');
+      console.log(hello);
+
+    const myBtn = document.querySelector('#myBtn');
+    const container = document.querySelector('#container');
+
+    container.addEventListener('click', function () {
+        console.log('клик по кjyntqythe');
+    });
+    myBtn.addEventListener('click', function () {
+        container.style.color = 'red';
+    });
+
+
+    const phone = document.querySelector('#phone');
+    phone.addEventListener('keydown', function (event) {
+        let isDigit = false;
+        let isDash = false;
+        let isControl = false;
+
+        if (event.key >= 0 || event.key <= 9) {
+            isDigit = true;
+        }
+        if (event.key == '-') {
+            isDash = true;
+        }
+        if (event.key == 'ArrowLeft' || event.key == 'ArrowRight' || event.key == 'Backspace') {
+            isControl = true;
+        }
+        if (!isDigit && !isDash && !isControl) {
+            event.preventDefault();
+        }
+    })
+
+
+</script>
+</body>
+</html>
