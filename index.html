@@ -14,7 +14,7 @@
    <meta name="theme-color" content="#ffffff">
    <link rel="stylesheet" href="css/normalize.css">
    <link rel="stylesheet" href="scss/main.css">
-   <script src="js/main.js"></script>
+
 </head>
 <body>
 <div class="wrapper">
@@ -116,95 +116,153 @@
          <div class="container menu-burger__container">
             <div class="carousel">
                <button type="button" class="carousel__arrow-left"></button>
-               <ul class="carousel__list">
-                  <li class="carousel__item">
-                     <div class="carousel__content">
-                        <a href="#" class="composition__trigger">
-                           <img src="img/content/menu-burger/burger_trigger.png" class="composition__trigger-pic"/>
-                           <div class="composition__trigger-text">Состав</div>
-                        </a>
-                        <div class="carousel__content-img">
-                           <img src="img/content/menu-burger/dark.png" class="carousel__content-pic">
-                        </div>
-                        <div class="carousel__content-calories">
-                           1200<div class="calories-text">ккал</div>
-                        </div>
+               <div class="carousel_wrpaper">
+                  <ul class="carousel__list">
+                     <li class="carousel__item">
+                        <div class="carousel__content">
+                           <a href="#" class="composition__trigger">
+                              <img src="img/content/menu-burger/burger_trigger.png" class="composition__trigger-pic"/>
+                              <div class="composition__trigger-text">Состав</div>
+                              <div class="drop-down-menu">
+                                 <table class="drop-down-table">
+                                    <tbody>
+                                    <tr class="drop-down-tr">
+                                       <td class="drop-down-td drop-down-td-img"><img
+                                               src="img/content/menu-burger/menu_icon/beef.png" class="drop-down-icon"/>
+                                       </td>
+                                       <td class="drop-down-td drop-down-header">Говядина</td>
+                                       <td class="drop-down-td drop-down-weight">300 г.</td>
+                                    </tr>
+                                    <tr class="drop-down-tr">
+                                       <td class="drop-down-td drop-down-td-img"><img
+                                               src="img/content/menu-burger/menu_icon/burger.png"
+                                               class="drop-down-icon"/></td>
+                                       <td class="drop-down-td drop-down-header">Булочки</td>
+                                       <td class="drop-down-td drop-down-weight">100 г.</td>
+                                    </tr>
+                                    <tr class="drop-down-tr">
+                                       <td class="drop-down-td drop-down-td-img"><img
+                                               src="img/content/menu-burger/menu_icon/greenery.png"
+                                               class="drop-down-icon"/></td>
+                                       <td class="drop-down-td drop-down-header">Зелень</td>
+                                       <td class="drop-down-td drop-down-weight">70 г.</td>
+                                    </tr>
+                                    <tr class="drop-down-tr">
+                                       <td class="drop-down-td drop-down-td-img"><img
+                                               src="img/content/menu-burger/menu_icon/sauce.png"
+                                               class="drop-down-icon"/></td>
+                                       <td class="drop-down-td drop-down-header">Соус</td>
+                                       <td class="drop-down-td drop-down-weight">150 г.</td>
+                                    </tr>
+                                    <tr class="drop-down-tr">
+                                       <td class="drop-down-td drop-down-td-img"><img
+                                               src="img/content/menu-burger/menu_icon/cucumber.png"
+                                               class="drop-down-icon"/></td>
+                                       <td class="drop-down-td drop-down-header">Овощи</td>
+                                       <td class="drop-down-td drop-down-weight">200 г.</td>
+                                    </tr>
+                                    <tr class="drop-down-tr">
+                                       <td class="drop-down-td drop-down-td-img"><img
+                                               src="img/content/menu-burger/menu_icon/cheese.png"
+                                               class="drop-down-icon"/></td>
+                                       <td class="drop-down-td drop-down-header">Сыр</td>
+                                       <td class="drop-down-td drop-down-weight">80 г.</td>
+                                    </tr>
+                                    </tbody>
+                                 </table>
+                              </div>
+                           </a>
+                           <div class="carousel__content-img">
+                              <img src="img/content/menu-burger/dark.png" class="carousel__content-pic">
+                           </div>
+                           <div class="carousel__content-calories">
+                              1200
+                              <div class="calories-text">ккал</div>
+                           </div>
 
-                     </div>
-                     <div class="carousel__content">
-                        <h2 class="menu-burger__title section__title">Команда</h2>
-                        <div class="carousel__content-description">
-                           Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками
-                           нежнейшего сыра
-                           эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического
-                           соуса
-                           чураско.
                         </div>
-                        <div class="carousel__order">
-                           <div class="carousel__order-price">500 <span>рублей</span>   </div>
-                           <a href="#" class="btn-link carousel__order-btn">заказть</a>
+                        <div class="carousel__content">
+                           <h2 class="menu-burger__title section__title">Dark BEEF Burger</h2>
+                           <div class="carousel__content-description">
+                              Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками
+                              нежнейшего сыра
+                              эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением
+                              экзотического
+                              соуса
+                              чураско.
+                           </div>
+                           <div class="carousel__order">
+                              <div class="carousel__order-price">500 <span>рублей</span></div>
+                              <a href="#" class="btn-link carousel__order-btn">заказть</a>
+                           </div>
                         </div>
-                     </div>
-                  </li>
-                  <li class="carousel__item">
-                     <div class="carousel__content">
-                        <a href="#" class="composition__trigger">
-                           <img src="img/content/menu-burger/burger_trigger.png" class="composition__trigger-pic"/>
-                           <div class="composition__trigger-text">Состав</div>
-                        </a>
-                        <div class="carousel__content-img">
-                           <img src="img/content/menu-burger/dark.png" class="carousel__content-pic">
-                        </div>
-                        <div class="carousel__content-calories">
-                           1200<div class="calories-text">ккал</div>
-                        </div>
+                     </li>
+                     <li class="carousel__item">
+                        <div class="carousel__content">
+                           <a href="#" class="composition__trigger">
+                              <img src="img/content/menu-burger/burger_trigger.png" class="composition__trigger-pic"/>
+                              <div class="composition__trigger-text">Состав</div>
 
-                     </div>
-                     <div class="carousel__content">
-                        <h2 class="menu-burger__title section__title">Команда</h2>
-                        <div class="carousel__content-description">
-                           Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками
-                           нежнейшего сыра
-                           эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического
-                           соуса
-                           чураско.
-                        </div>
-                        <div class="carousel__order">
-                           <div class="carousel__order-price">500 <span>рублей</span>   </div>
-                           <a href="#" class="btn-link carousel__order-btn">заказть</a>
-                        </div>
-                     </div>
-                  </li>
-                  <li class="carousel__item">
-                     <div class="carousel__content">
-                        <a href="#" class="composition__trigger">
-                           <img src="img/content/menu-burger/burger_trigger.png" class="composition__trigger-pic"/>
-                           <div class="composition__trigger-text">Состав</div>
-                        </a>
-                        <div class="carousel__content-img">
-                           <img src="img/content/menu-burger/dark.png" class="carousel__content-pic">
-                        </div>
-                        <div class="carousel__content-calories">
-                           1200<div class="calories-text">ккал</div>
-                        </div>
+                           </a>
+                           <div class="carousel__content-img">
+                              <img src="img/content/menu-burger/dark.png" class="carousel__content-pic">
+                           </div>
+                           <div class="carousel__content-calories">
+                              1200
+                              <div class="calories-text">ккал</div>
+                           </div>
 
-                     </div>
-                     <div class="carousel__content">
-                        <h2 class="menu-burger__title section__title">Команда</h2>
-                        <div class="carousel__content-description">
-                           Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками
-                           нежнейшего сыра
-                           эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического
-                           соуса
-                           чураско.
                         </div>
-                        <div class="carousel__order">
-                           <div class="carousel__order-price">500 <span>рублей</span>   </div>
-                           <a href="#" class="btn-link carousel__order-btn">заказть</a>
+                        <div class="carousel__content">
+                           <h2 class="menu-burger__title section__title">Burger Burger Burger</h2>
+                           <div class="carousel__content-description">
+                              Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками
+                              нежнейшего сыра
+                              эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением
+                              экзотического
+                              соуса
+                              чураско.
+                           </div>
+                           <div class="carousel__order">
+                              <div class="carousel__order-price">500 <span>рублей</span></div>
+                              <a href="#" class="btn-link carousel__order-btn">заказть</a>
+                           </div>
                         </div>
-                     </div>
-                  </li>
-               </ul>
+                     </li>
+                     <li class="carousel__item">
+                        <div class="carousel__content">
+                           <a href="#" class="composition__trigger">
+                              <img src="img/content/menu-burger/burger_trigger.png" class="composition__trigger-pic"/>
+                              <div class="composition__trigger-text">Состав</div>
+
+                           </a>
+                           <div class="carousel__content-img">
+                              <img src="img/content/menu-burger/dark.png" class="carousel__content-pic">
+                           </div>
+                           <div class="carousel__content-calories">
+                              1200
+                              <div class="calories-text">ккал</div>
+                           </div>
+
+                        </div>
+                        <div class="carousel__content">
+                           <h2 class="menu-burger__title section__title">Dark BEEF</h2>
+                           <div class="carousel__content-description">
+                              Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками
+                              нежнейшего сыра
+                              эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением
+                              экзотического
+                              соуса
+                              чураско.
+                           </div>
+                           <div class="carousel__order">
+                              <div class="carousel__order-price">500 <span>рублей</span></div>
+                              <a href="#" class="btn-link carousel__order-btn">заказть</a>
+                           </div>
+                        </div>
+                     </li>
+                  </ul>
+               </div>
                <button type="button" class="carousel__arrow-right"></button>
             </div>
          </div>
@@ -275,7 +333,7 @@
             <h2 class="section__title menu__title">Меню</h2>
             <div class="menu__accordion">
                <ul class="menu__list">
-                  <li class="menu__item menu__item_active">
+                  <li class="menu__item">
                      <a href="#" class="menu__item-header menu__item-header_meat">
                         <div class="menu__item-header-text">Для мясоедов</div>
                      </a>
@@ -331,6 +389,15 @@
                      таким расплавленным.
                   </div>
                   <div class="reviews__btn"><a href="#" class="btn-link btn-link_reviews">подробнее</a></div>
+               </div>
+               <div class="reviews__popup">
+                  <div class="popup__content">
+                     <div class="popup__header">Константин Спилберг</div>
+                     <div class="popup__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно
+                        забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр
+                        таким расплавленным.
+                     </div>
+                     <a href="#" class="popup__close"></a></div>
                </div>
             </li>
             <li class="reviews__item" style="background-image: url('img/content/reviews/foto2.jpg')">
@@ -545,5 +612,6 @@
       <li class="nav-sidebar__item"><a href="#" class="nav-sidebar__link"></a></li>
    </ul>
 </div>
+<script src="js/main.js"></script>
 </body>
 </html>

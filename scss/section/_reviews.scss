@@ -16,8 +16,9 @@
 .reviews__item {
   width: 25%;
   height: 50%;
+  position: relative;
 
-  @include tablets{
+  @include tablets {
     width: 50%;
     height: 25%;
   }
@@ -53,7 +54,8 @@
   padding: 10% 5%;
   opacity: 0;
 }
-.reviews__item:hover .reviews__description{
+
+.reviews__item:hover .reviews__description {
   opacity: 1;
   -webkit-transition: all .5s;
   transition: all .5s;
@@ -75,9 +77,46 @@
 .reviews__btn {
   margin-top: 10%;
 }
-.btn-link_reviews{
+
+.btn-link_reviews {
   background: $dark;
-    &:hover{
-      background-color: darken($dark, 7%);
-    }
+  &:hover {
+    background-color: darken($dark, 7%);
+  }
+}
+
+.reviews__popup {
+  opacity: 0;
+  will-change: opacity;
+  transition: .3s;
+  background: #ffffff;
+  border-radius: 8px;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  /* transform: translate(50%, 50%); */
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 10;
+  background: rgba($black, .8);
+}
+
+.popup__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 200px;
+}
+
+.popup__close {
+  width: 20px;
+  height: 20px;
+  background: #cb411b;
+  display: block;
+  position: absolute;
+  top: 5%;
+  right: 5%;
 }

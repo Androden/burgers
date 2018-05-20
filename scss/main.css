@@ -405,6 +405,7 @@ ul {
 .reviews__item {
   width: 25%;
   height: 50%;
+  position: relative;
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
   -webkit-transition: all .5s;
@@ -461,6 +462,39 @@ ul {
   .btn-link_reviews:hover {
     background-color: #1e2021; }
 
+.reviews__popup {
+  opacity: 0;
+  will-change: opacity;
+  transition: .3s;
+  background: #ffffff;
+  border-radius: 8px;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  /* transform: translate(50%, 50%); */
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.8); }
+
+.popup__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 200px; }
+
+.popup__close {
+  width: 20px;
+  height: 20px;
+  background: #cb411b;
+  display: block;
+  position: absolute;
+  top: 5%;
+  right: 5%; }
+
 .menu-burger {
   background: #f9b43b;
   /* Old browsers */
@@ -478,15 +512,19 @@ ul {
 .carousel {
   display: flex; }
 
-.carousel__arrow-left {
+.carousel__arrow-left, .carousel__arrow-right {
   background: transparent;
-  border: none; }
-  .carousel__arrow-left:after {
+  border: none;
+  outline: none; }
+  .carousel__arrow-left:after, .carousel__arrow-right:after {
     content: "";
     display: block;
     width: 15px;
     height: 25px;
-    background: url("../img/content/menu-burger/arrow-scroll.png") center center; }
+    background: url("../img/content/menu-burger/arrow-scroll_left.png") center center; }
+
+.carousel__arrow-right:after {
+  background: url("../img/content/menu-burger/arrow-scroll_right.png") center center; }
 
 .carousel__content {
   display: flex;
@@ -497,10 +535,14 @@ ul {
 .menu-burger__title {
   color: #ffffff; }
 
+.carousel_wrpaper {
+  width: 100%;
+  overflow: hidden; }
+
 .carousel__list {
-  overflow: hidden;
   display: flex;
-  position: relative; }
+  position: relative;
+  transition: right .3s; }
 
 .carousel__item {
   display: flex;
@@ -508,15 +550,18 @@ ul {
   min-width: 100%; }
 
 .composition__trigger {
-  width: 90px;
-  height: 90px;
+  width: 5.625rem;
+  height: 5.625rem;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 6px;
   position: absolute;
   background: #f08c33;
-  flex-direction: column; }
+  flex-direction: column;
+  text-decoration: none;
+  will-change: background;
+  transition: background .3s; }
 
 .composition__trigger-pic {
   max-width: 100%; }
@@ -524,8 +569,7 @@ ul {
 .composition__trigger-text {
   font-size: 0.875rem;
   font-family: Gagalin;
-  color: #ffffff;
-  text-decoration: none; }
+  color: #ffffff; }
 
 .carousel__content-img {
   margin: 4.6875rem 0; }
@@ -546,6 +590,7 @@ ul {
   color: #ffffff; }
 
 .carousel__content-description {
+  padding-right: 2%;
   font-size: 0.875rem;
   font-family: Ubuntu;
   color: #ffffff; }
@@ -562,6 +607,44 @@ ul {
 .carousel__order-btn {
   margin-left: 1.25rem;
   font-size: 0.875rem; }
+
+.drop-down-menu {
+  width: 16.875rem;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 0.5rem;
+  padding: 20% 15%;
+  position: absolute;
+  left: 90%;
+  top: 0;
+  opacity: 0;
+  will-change: opacity;
+  transition: opacity .3s; }
+
+.drop-down-menu_active {
+  opacity: 1; }
+
+.drop-down-table {
+  width: 100%; }
+
+.drop-down-tr {
+  width: 250px;
+  vertical-align: center;
+  margin-bottom: 2%; }
+  .drop-down-tr:last-child {
+    margin-bottom: 0; }
+
+.drop-down-icon {
+  max-width: 100%; }
+
+.drop-down-td {
+  font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  text-align: left; }
+
+.drop-down-weight {
+  font-weight: 300;
+  text-align: right; }
 
 .team {
   background: url("../img/bg/team_bg.jpg") center center no-repeat;
@@ -693,7 +776,7 @@ ul {
     .menu__title {
       padding-left: 1%; } }
 
-.menu__accordeon {
+.menu__accordion {
   position: absolute;
   width: 70%;
   top: 0;

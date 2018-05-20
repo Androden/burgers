@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="ru-RU">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport"
+         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Урок по асинхронности в JS, Таймеры, Ajax</title>
+
+   <style>
+      #element {
+         position: relative;
+         width: 100px;
+         height: 100px;
+         background: #cb411b;
+         padding: 15px;
+      }
+   </style>
+</head>
+<body>
+<div>
+   <h1 style="display: inline">Привет</h1>loftschool!
+   <br>
+   <button id="startButton">Запустить таймер</button>
+   <button id="stopButton">Остановить таймер</button>
+   <div>
+      <div id="element">Привет</div>
+   </div>
+</div>
+
+<!-- загрузка картинок -->
+<div><h1>Загрузка картинок</h1>
+   <button id="loadButton">Загрузить</button>
+   <div class="gallery">
+   </div>
+</div>
+
+<!-- загрузка Ajax -->
+<div>
+   <h1>Загрузка Ajax</h1>
+   <button id="ajaxButton">Загрузить</button>
+   <div class="ajaxResult"></div>
+</div>
+<script>
+    var startButton = document.querySelector('#startButton');
+    var stopButton = document.querySelector('#stopButton');
+    var element = document.querySelector('#element');
+    var IntervalId;// идентификатор, который передает функция setInterval
+    var currentValue = 0;
+    var step = 10;
+
+    startButton.addEventListener('click', function () {
+        console.log("Запустили таймер");
+        IntervalId = setInterval(function () {
+            currentValue += step;
+            element.style.left = currentValue + 'px';
+            element.style.height = currentValue + 'px';
+
+            if (currentValue >= 500) {
+                clearInterval(IntervalId);
+            }
+        }, 10);
+    });
+    stopButton.addEventListener('click', function () {
+        console.log("Остановили таймер");
+        clearInterval(IntervalId);
+    });
+
+    // как работает интерпритатор
+
+    console.log('До установки таймера');
+    setTimeout(function () {
+        console.log('Во время установки таймера');
+    }, 2000);
+    console.log('После установки таймера');
+
+
+    var loadButton = document.querySelector('#loadButton');
+    var gallery = document.querySelector('.gallery');
+    var urls = [
+        'https://picsum.photos/200',
+        'https://picsum.photos/200',
+        'https://picsum.photos/200'
+    ];
+    function loadImage(url){
+        const promise = new Promise(function (resolve) {
+            const img = document.createElement('img');
+            gallery.appendChild(img);
+            img.src = url;
+            img.addEventListener('load', function () {
+                resolve();
+            });
+        });
+        return promise;
+    }
+
+    loadButton.addEventListener('click', function () {
+         loadImage(urls[0]).then(function () {
+             console.log('Каритнка 1 загружена');
+             return loadImage(urls[1]);
+         })
+             .then(function () {
+             console.log('Каритнка 2 загружена');
+                 return loadImage(urls[2]);
+         })
+             .then(function () {
+             console.log('Каритнка 3 загружена');
+         });
+        /*var img = document.createElement('img');
+        img.src = urls[0];//по этому свойству браузер сразу загружает картинку
+        gallery.appendChild(img);
+        img.addEventListener('load', function () {
+            console.log('Картинка загружена');
+        })*/
+    });
+    // Промисы (объект, которые находится в одном из трех состояний pending, fulfiled, rejected)
+    //then в добавок возвращает новый промис
+    console.log('До Промеса');
+    const promise = new Promise(function (resolve, reject) {
+        console.log('Внутри Промеса');
+        resolve();
+    });
+    promise.then(function () {
+        console.log('EEEEEE');
+    });
+    promise.then(function () {
+        console.log('rrrrrrrr');
+    });
+    console.log('После Промеса');
+    
+    //Заргузка Alax
+    var ajaxButton = document.querySelector('#ajaxButton');
+    var ajaxResult = document.querySelector('.ajaxResult');
+
+    function loadFile(url){
+        const promise = new Promise(function (resolve) {
+            const xhr = new XMLHttpRequest();
+            xhr.open('GET', url);
+            xhr.send();
+            xhr.addEventListener('load', function () {
+                resolve(xhr.responseText);
+            });
+        });
+        return promise;
+    }
+    
+    ajaxButton.addEventListener('click', function () {
+         loadFile('data.txt').then(function (value) {
+             ajaxResult.textContent = value;
+
+             return loadFile('data2.txt');
+         }).then(function (value) {
+             ajaxResult.textContent += value;
+         });
+        /*const xhr = new XMLHttpRequest();
+        xhr.open('GET', 'data.txt');
+        xhr.send();
+        xhr.addEventListener('load', function () {
+            ajaxResult.textContent = xhr.responseText;
+        });*/
+    });
+</script>
+</body>
+</html>

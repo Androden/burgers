@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ru-RU">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport"
+         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Document</title>
+</head>
+<body>
+<script type="application/javascript">
+    // напишите здесь код, который возвращает новый массив
+    // в котором содержатся те элементы input, которые больше than
+    try {
+        function filter(input, than) {
+            var arr = [];
+            if (input.length == 0) {
+                throw new Error('Передан пустой массив');
+            }
+            for (var i = 0; i < input.length; i++) {
+                if (!isFinite(input[i])) {
+                    throw new Error('Аргумент массива не являтся числом');
+                } else if (input[i] < 0) {
+                    throw new Error('Аргумент являтся отрицательным числом');
+                } else if (input[i] > than) {
+                    arr.push(input[i]);
+                }
+            }
+            return arr;
+        }
+
+        var array = [12, 100, 'dsds', 65, 10, 30];
+        var result = filter(array, 60);
+        console.log(result); // [100, 65];
+
+    } catch (e) {
+        console.log(e.message);
+    }
+
+
+    res = filter(array, 20);
+    console.log(res); // [100, 34, 65];
+</script>
+</body>
+</html>
