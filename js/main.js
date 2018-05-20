@@ -130,12 +130,12 @@ var closeBtn = document.querySelector('.popup__close');
 
 openBtn.addEventListener('click', function () {
     event.preventDefault();
-    popup.style.opacity = '1';
+    popup.style.display = 'block';
 });
 
 closeBtn.addEventListener('click', function () {
     event.preventDefault();
-    popup.style.opacity = '0';
+    popup.style.display = 'none';
 });
 
 
