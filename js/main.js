@@ -1,21 +1,22 @@
 
 //Меню
 
-const menuTrigger = document.querySelector('.composition__trigger');
+const menuTrigger = document.querySelectorAll('.composition__trigger');
 console.log(menuTrigger);
-const dropDownMenu = document.querySelector('.drop-down-menu');
-
-menuTrigger.addEventListener('click', function () {
+const dropDownMenu = document.querySelectorAll('.drop-down-menu');
+ for (var i=0; i<menuTrigger.length; i++){
+menuTrigger[i].addEventListener('click', function (event) {
+    console.log(menuTrigger[i]);
     event.preventDefault();
-    if (dropDownMenu.classList.contains('drop-down-menu_active')){
-        dropDownMenu.classList.remove("drop-down-menu_active");
-        menuTrigger.style.background='#f08c33';
+    if (dropDownMenu[i].classList.contains('drop-down-menu_active')){
+        dropDownMenu[i].classList.remove("drop-down-menu_active");
+        menuTrigger[i].style.background='#f08c33';
     }else {
-        dropDownMenu.classList.add("drop-down-menu_active");
-        menuTrigger.style.background='#e35028';
+        dropDownMenu[i].classList.add("drop-down-menu_active");
+        menuTrigger[i].style.background='#e35028';
     }
 });
-
+}
 
 //Карусель от Сергея
 
@@ -138,4 +139,6 @@ closeBtn.addEventListener('click', function () {
     popup.style.display = 'none';
 });
 
-
+document.addEventListener('click', e =>{
+    console.log(e.target);
+});
