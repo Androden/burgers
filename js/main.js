@@ -4,7 +4,7 @@
 const menuTrigger = document.querySelectorAll('.composition__trigger');
 console.log(menuTrigger);
 const dropDownMenu = document.querySelectorAll('.drop-down-menu');
- for (var i=0; i<menuTrigger.length; i++){
+ for (let i=0; i<menuTrigger.length; i++){
 menuTrigger[i].addEventListener('click', function (event) {
     console.log(menuTrigger[i]);
     event.preventDefault();
@@ -72,7 +72,7 @@ document.addEventListener("click", function(e) {
                 contents[i].style.height = null;
             }
             // открываем текущий блок с контентом
-            content.style.height = content.scrollHeight + "px";
+            content.style.height = content.scrollHeight + 100 + "px";
 
         } else { // активный
             // удаляем класс active для текущего li
@@ -111,7 +111,7 @@ document.addEventListener("click", function(e) {
                 contentsMenus[i].style.width = null;
             }
             // открываем текущий блок с контентом
-            contentsMenu.style.width = contentsMenu.scrollWidth*4 + "px";
+            contentsMenu.style.width = contentsMenu.scrollWidth + 300 + "px";
 
         } else { // активный
             // удаляем класс active для текущего li
@@ -125,20 +125,33 @@ document.addEventListener("click", function(e) {
 
 //Отзывы
 
-var openBtn = document.querySelector('.reviews__btn');
+var openBtn = document.querySelectorAll('.reviews__btn');
 var popup = document.querySelector('.reviews__popup');
 var closeBtn = document.querySelector('.popup__close');
-
-openBtn.addEventListener('click', function () {
+for (let i=0; i<openBtn.length; i++){
+openBtn[i].addEventListener('click', function (event) {
     event.preventDefault();
     popup.style.display = 'block';
 });
 
-closeBtn.addEventListener('click', function () {
+closeBtn.addEventListener('click', function (event) {
     event.preventDefault();
     popup.style.display = 'none';
 });
+}
+
+
 
 document.addEventListener('click', e =>{
     console.log(e.target);
+});
+
+
+//jQuery
+
+let elems = $('.section');
+console.log(elems);
+
+$(document).ready(function () {  //DOMContentLoaded
+    console.log('DOM дерево построено');
 });
