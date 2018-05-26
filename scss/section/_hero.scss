@@ -20,49 +20,80 @@
   display: block;
 }
 
+.logo__img{
+  @include tablets{
+    position: absolute;
+    z-index: 9999;
+  }
+}
 // антипаттерн
 .header__menu {
   margin-right: rem(15px);
+  @include tablets {
+display: none;
 
-  @include tablets{
+  }
+}
+.header__btn{
+  margin-right: rem(85px);
+}
+.header__menu-trigger{
+  //background: url("../img/content/hero/navicon.png") center center / cover no-repeat;
+  order: 2;
+  margin-right: 0;
+  margin-left: rem(15px);
+    content: "";
+    display: none;
     width: 24px;
     height: 22px;
-    background: url("../img/content/hero/navicon.png") center center / cover no-repeat;
-    order: 2;
-    margin-right: 0;
-    margin-left: rem(15px);
-    position: relative;
-    &:after{
-      content: "";
-      display: block;
-      width: 24px;
-      height: 22px;
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      background: $black;
-      cursor: pointer;
-      opacity: .4;
-      -webkit-transition: all .3s;
-      -moz-transition: all .3s;
-      -ms-transition: all .3s;
-      -o-transition: all .3s;
-      transition: all .3s;
-    }
-    &:hover:after{
-      opacity: 0;
-    }
+    position: absolute;
+    top: 1.5%;
+    bottom: 0;
+    left: 90%;
+    background: $black;
+    cursor: pointer;
+    opacity: .4;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+  @include tablets{
+    display: block;
   }
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.header__menu_adaptive {
+  display: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba($black, .89);
+  z-index: 999;
+}
+
+.nav_adaptive {
+  padding-top: 10%;
 }
 
 .nav__list {
   margin: 0;
   padding: 0;
-  @include tablets{
-  height: 0;
+  @include tablets {
+    height: 0;
     overflow: hidden;
   }
+}
+
+.nav__list_adaptive {
+  text-align: center;
+  font-size: rem(24px);
+  font-family: Ubuntu;
 }
 
 .nav__item {
@@ -75,6 +106,24 @@
     content: ' ';
     @include circle(5px, #fff);
     margin: 0 rem(12px);
+  }
+  &:last-child:after {
+    display: none;
+  }
+}
+
+.nav__item_adaptive {
+  position: relative;
+  margin: 25px 0;
+  &:after {
+    display: block;
+    vertical-align: middle;
+    content: ' ';
+    @include circle(5px, #fff);
+    left: 50%;
+    top: 150%;
+    position: absolute;
+    margin-bottom: 50px;
   }
   &:last-child:after {
     display: none;
@@ -122,18 +171,22 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 0 20%;
   }
 }
 
 .hero__left,
 .hero__right {
-  float: left;
+  //float: left;
   width: 50%;
   @include tablets() {
     float: none;
-    width: auto;
+    width: 100%;
   }
+}
+
+.hero__left {
+  background: url('../img/content/hero/burger_drops.png') center center / contain no-repeat;
+  height: rem(451px);
 }
 
 .hero__right {
@@ -144,8 +197,11 @@
 }
 
 .hero__img, .hero__description {
-  flex-basis: 50%;
   display: flex;
+}
+
+.hero__img-pic {
+  max-width: 100%;
 }
 
 .hero__description {
@@ -180,7 +236,7 @@
   position: absolute;
   bottom: 5%;
   left: 50%;
-  transform: translateX(50%);
+  transform: translateX(-50%);
   opacity: .7;
   -webkit-transition: opacity .5s;
   transition: opacity .5s;
@@ -189,3 +245,13 @@
   }
 }
 
+.hero__close-popup{
+  position: absolute;
+  right: 10%;
+  top: 5%;
+  opacity: .6;
+  transition: opacity .3s;
+  &:hover{
+    opacity: 1;
+  }
+}

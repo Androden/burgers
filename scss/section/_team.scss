@@ -99,8 +99,9 @@
   height: 0;
   overflow: hidden;
   opacity: 0;
-  transition: all .5s;
-  -webkit-transition: all .5s;
+  will-change: min-height;
+  transition:  min-height .5s;
+  -webkit-transition: min-height .5s;
   display: flex;
   font: rem(14px) Ubuntu;
 }

@@ -5,6 +5,9 @@
   align-items: center;
   .section__title {
     text-align: center;
+    @include tablets{
+      padding-top: 0;
+    }
   }
 }
 
@@ -29,7 +32,7 @@
   width: 45%;
   margin-left: 5%;
 
-  @include phones {
+  @include tablets {
     width: 100%;
     margin-left: 0;
   }

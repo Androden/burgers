@@ -36,6 +36,7 @@
 
   @include phones {
     flex-direction: row;
+    text-align: left;
   }
 }
 
@@ -48,11 +49,12 @@
   font-family: Lifehack;
   font-size: rem(24px);
 
-  @include tablets{font-size: rem(22px)}
-  @include phones{font-size: rem(20px)}
+  @include tablets{font-size: rem(25px);}
+  @include phones{font-size: rem(24px);}
 }
 .best__text {
   font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
-  font-size: .9rem;
+  font-size: 1rem;
   color: lighten($dark, 40%);
+    @include phones{font-size: rem(16px);}
 }

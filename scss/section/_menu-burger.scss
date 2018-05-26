@@ -21,6 +21,8 @@
   background: transparent;
   border: none;
   outline: none;
+  display: inline-flex;
+  align-self: center;
   &:after {
     content: "";
     display: block;
@@ -28,7 +30,7 @@
     height: 25px;
     background: url("../img/content/menu-burger/arrow-scroll_left.png") center center;
   }
-  &:hover{
+  &:hover {
     cursor: pointer;
   }
 }
@@ -44,14 +46,20 @@
   position: relative;
 }
 
-.menu-burger__title {
+.carousel__title {
+  font-family: 'Gagalin';
+  font-size: 4.5rem;
+  font-weight: 300;
+  line-height: 1.42;
+  margin: 0;
+  padding-top: 1.75rem;
   color: $white;
-  @include tablets{
+  @include tablets {
     padding-top: 0;
   }
 }
 
-.carousel_wrpaper {
+.carousel__wrapper {
   width: 100%;
   overflow: hidden;
 }
@@ -66,11 +74,11 @@
   display: flex;
   margin: 0.9375rem;
   min-width: 100%;
-    @include tablets{
-      justify-content: center;
-      flex-direction: column;
-      align-items: center;
-}
+  @include tablets {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .composition__trigger {
@@ -99,11 +107,11 @@
 }
 
 .carousel__content-img {
-  margin: rem(75px) 0;
+  margin-top: rem(75px);
 }
 
-.carousel__content{
-  @include tablets{
+.carousel__content {
+  @include tablets {
     text-align: center;
   }
 }
@@ -114,19 +122,23 @@
 
 .carousel__content-calories {
   position: absolute;
-  bottom: 0;
+  bottom: 17%;;
   width: rem(61px);
   height: rem(61px);
   background: url("../img/content/menu-burger/kkal.png");
   text-align: center;
-  padding-top: rem(40px);
-  font-size: rem(14px);
+  padding-top: 2rem;
+  font-size: rem(20px);
   font-family: Gagalin;
   color: $white;
-    @include tablets{
-      top: 0;
-      right: 0;
-    }
+  @include tablets {
+    top: 0;
+    right: 0;
+  }
+}
+
+.carousel__content-calories-text {
+  font-size: rem(14px);
 }
 
 .carousel__content-description {
@@ -137,7 +149,7 @@
 }
 
 .carousel__order {
-  //display: flex;
+  display: flex;
 }
 
 .carousel__order-price {
@@ -152,11 +164,12 @@
 }
 
 .carousel__order-btn {
+  align-self: center;
   margin-left: rem(20px);
   font-size: rem(14px);
 }
 
-.drop-down-menu {
+.drop-down__menu {
   width: rem(270px);
   background: rgba($white, .9);
   border-radius: rem(8px);
@@ -169,35 +182,35 @@
   transition: opacity .3s;
 }
 
-.drop-down-menu_active {
+.drop-down__menu_active {
   opacity: 1;
 }
 
-.drop-down-table{
+.drop-down__table {
   width: 100%;
 }
 
-.drop-down-tr {
+.drop-down__tr {
   width: 250px;
   vertical-align: center;
   margin-bottom: 2%;
-  &:last-child{
+  &:last-child {
     margin-bottom: 0;
   }
 }
 
-.drop-down-icon {
+.drop-down__icon {
   max-width: 100%;
 }
 
-.drop-down-td{
+.drop-down__td {
   font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
   font-size: rem(14px);
   font-weight: 400;
   text-align: left;
 }
 
-.drop-down-weight{
+.drop-down__weight {
   font-weight: 300;
   text-align: right;
 }

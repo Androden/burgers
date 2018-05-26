@@ -14,12 +14,13 @@
    <meta name="theme-color" content="#ffffff">
    <link rel="stylesheet" href="css/normalize.css">
    <link rel="stylesheet" href="scss/main.css">
+   <link rel="stylesheet" href="scss/section/_hero.scss">
 
 </head>
 <body>
 <div class="wrapper">
    <div class="maincontent">
-      <section class="section hero">
+      <section class="section hero section_active">
          <div class="container hero__container">
             <header class="header">
                <div class="header__logo">
@@ -42,12 +43,12 @@
                <div class="header__btn">
                   <a href="" class="btn-link">Заказать</a>
                </div>
+               <div class="header__menu-trigger">
+                  <img src="img/content/hero/navicon.png" alt="drops" class=".header__menu-trigger-pic">
+               </div>
             </header>
             <div class="hero__content">
                <div class="hero__left">
-                  <div class="hero__img">
-                     <img src="img/content/hero/burger_drops.png" alt="drops">
-                  </div>
                </div>
                <div class="hero__right">
                   <div class="hero__description">
@@ -63,6 +64,23 @@
             </div>
          </div>
       </section>
+      <div class="header__menu_adaptive">
+         <nav class="nav_adaptive">
+            <ul class="nav__list_adaptive">
+               <li class="nav__item_adaptive"><a href="" class="nav__link">о нас</a></li>
+               <li class="nav__item_adaptive"><a href="" class="nav__link">бургеры</a></li>
+               <li class="nav__item_adaptive"><a href="" class="nav__link">команда</a></li>
+               <li class="nav__item_adaptive"><a href="" class="nav__link">меню</a></li>
+               <li class="nav__item_adaptive"><a href="" class="nav__link">отзывы</a></li>
+               <li class="nav__item_adaptive"><a href="" class="nav__link">контакты</a></li>
+            </ul>
+         </nav>
+         <div class="hero__close-popup">
+            <a href="#" class="hero__close-popup-btn">
+               <img src="img/content/hero/hero_close_popup.png" alt="закрыть" class="hero__close-popup-btn-img">
+            </a>
+         </div>
+      </div>
       <section class="section best">
          <div class="container">
             <div class="section__title section__title_black">Мы лучшие</div>
@@ -116,57 +134,58 @@
          <div class="container menu-burger__container">
             <div class="carousel">
                <button type="button" class="carousel__arrow-left"></button>
-               <div class="carousel_wrpaper">
+               <div class="carousel__wrapper">
                   <ul class="carousel__list">
                      <li class="carousel__item">
                         <div class="carousel__content">
                            <a href="#" class="composition__trigger">
                               <img src="img/content/menu-burger/burger_trigger.png" class="composition__trigger-pic"/>
                               <div class="composition__trigger-text">Состав</div>
-                              <div class="drop-down-menu">
-                                 <table class="drop-down-table">
+                              <div class="drop-down__menu">
+                                 <table class="drop-down__table">
                                     <tbody>
-                                    <tr class="drop-down-tr">
-                                       <td class="drop-down-td drop-down-td-img"><img
-                                               src="img/content/menu-burger/menu_icon/beef.png" class="drop-down-icon"/>
+                                    <tr class="drop-down__tr">
+                                       <td class="drop-down__td drop-down__td-img"><img
+                                               src="img/content/menu-burger/menu_icon/beef.png"
+                                               class="drop-down__icon"/>
                                        </td>
-                                       <td class="drop-down-td drop-down-header">Говядина</td>
-                                       <td class="drop-down-td drop-down-weight">300 г.</td>
+                                       <td class="drop-down__td drop-down__header">Говядина</td>
+                                       <td class="drop-down__td drop-down__weight">300 г.</td>
                                     </tr>
-                                    <tr class="drop-down-tr">
-                                       <td class="drop-down-td drop-down-td-img"><img
+                                    <tr class="drop-down__tr">
+                                       <td class="drop-down__td drop-down__td-img"><img
                                                src="img/content/menu-burger/menu_icon/burger.png"
-                                               class="drop-down-icon"/></td>
-                                       <td class="drop-down-td drop-down-header">Булочки</td>
-                                       <td class="drop-down-td drop-down-weight">100 г.</td>
+                                               class="drop-down__icon"/></td>
+                                       <td class="drop-down__td drop-down__header">Булочки</td>
+                                       <td class="drop-down__td drop-down__weight">100 г.</td>
                                     </tr>
-                                    <tr class="drop-down-tr">
-                                       <td class="drop-down-td drop-down-td-img"><img
+                                    <tr class="drop-down__tr">
+                                       <td class="drop-down__td drop-down__td-img"><img
                                                src="img/content/menu-burger/menu_icon/greenery.png"
-                                               class="drop-down-icon"/></td>
-                                       <td class="drop-down-td drop-down-header">Зелень</td>
-                                       <td class="drop-down-td drop-down-weight">70 г.</td>
+                                               class="drop-down__icon"/></td>
+                                       <td class="drop-down__td drop-down__header">Зелень</td>
+                                       <td class="drop-down__td drop-down__weight">70 г.</td>
                                     </tr>
-                                    <tr class="drop-down-tr">
-                                       <td class="drop-down-td drop-down-td-img"><img
+                                    <tr class="drop-down__tr">
+                                       <td class="drop-down__td drop-down__td-img"><img
                                                src="img/content/menu-burger/menu_icon/sauce.png"
-                                               class="drop-down-icon"/></td>
-                                       <td class="drop-down-td drop-down-header">Соус</td>
-                                       <td class="drop-down-td drop-down-weight">150 г.</td>
+                                               class="drop-down__icon"/></td>
+                                       <td class="drop-down__td drop-down__header">Соус</td>
+                                       <td class="drop-down__td drop-down__weight">150 г.</td>
                                     </tr>
-                                    <tr class="drop-down-tr">
-                                       <td class="drop-down-td drop-down-td-img"><img
+                                    <tr class="drop-down__tr">
+                                       <td class="drop-down__td drop-down__td-img"><img
                                                src="img/content/menu-burger/menu_icon/cucumber.png"
-                                               class="drop-down-icon"/></td>
-                                       <td class="drop-down-td drop-down-header">Овощи</td>
-                                       <td class="drop-down-td drop-down-weight">200 г.</td>
+                                               class="drop-down__icon"/></td>
+                                       <td class="drop-down__td drop-down__header">Овощи</td>
+                                       <td class="drop-down__td drop-down__weight">200 г.</td>
                                     </tr>
-                                    <tr class="drop-down-tr">
-                                       <td class="drop-down-td drop-down-td-img"><img
+                                    <tr class="drop-down__tr">
+                                       <td class="drop-down__td drop-down__td-img"><img
                                                src="img/content/menu-burger/menu_icon/cheese.png"
-                                               class="drop-down-icon"/></td>
-                                       <td class="drop-down-td drop-down-header">Сыр</td>
-                                       <td class="drop-down-td drop-down-weight">80 г.</td>
+                                               class="drop-down__icon"/></td>
+                                       <td class="drop-down__td drop-down__header">Сыр</td>
+                                       <td class="drop-down__td drop-down__weight">80 г.</td>
                                     </tr>
                                     </tbody>
                                  </table>
@@ -177,12 +196,12 @@
                            </div>
                            <div class="carousel__content-calories">
                               1200
-                              <div class="calories-text">ккал</div>
+                              <div class="carousel__content-calories-text">ккал</div>
                            </div>
 
                         </div>
                         <div class="carousel__content">
-                           <h2 class="menu-burger__title section__title">Dark BEEF Burger</h2>
+                           <h2 class="carousel__title">Dark BEEF Burger</h2>
                            <div class="carousel__content-description">
                               Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками
                               нежнейшего сыра
@@ -202,50 +221,51 @@
                            <a href="#" class="composition__trigger">
                               <img src="img/content/menu-burger/burger_trigger.png" class="composition__trigger-pic"/>
                               <div class="composition__trigger-text">Состав</div>
-                              <div class="drop-down-menu">
-                                 <table class="drop-down-table">
+                              <div class="drop-down__menu">
+                                 <table class="drop-down__table">
                                     <tbody>
-                                    <tr class="drop-down-tr">
-                                       <td class="drop-down-td drop-down-td-img"><img
-                                               src="img/content/menu-burger/menu_icon/beef.png" class="drop-down-icon"/>
+                                    <tr class="drop-down__tr">
+                                       <td class="drop-down__td drop-down__td-img"><img
+                                               src="img/content/menu-burger/menu_icon/beef.png"
+                                               class="drop-down__icon"/>
                                        </td>
-                                       <td class="drop-down-td drop-down-header">Говядина</td>
-                                       <td class="drop-down-td drop-down-weight">300 г.</td>
+                                       <td class="drop-down__td drop-down__header">Говядина</td>
+                                       <td class="drop-down__td drop-down__weight">300 г.</td>
                                     </tr>
-                                    <tr class="drop-down-tr">
-                                       <td class="drop-down-td drop-down-td-img"><img
+                                    <tr class="drop-down__tr">
+                                       <td class="drop-down__td drop-down__td-img"><img
                                                src="img/content/menu-burger/menu_icon/burger.png"
-                                               class="drop-down-icon"/></td>
-                                       <td class="drop-down-td drop-down-header">Булочки</td>
-                                       <td class="drop-down-td drop-down-weight">100 г.</td>
+                                               class="drop-down__icon"/></td>
+                                       <td class="drop-down__td drop-down__header">Булочки</td>
+                                       <td class="drop-down__td drop-down__weight">100 г.</td>
                                     </tr>
-                                    <tr class="drop-down-tr">
-                                       <td class="drop-down-td drop-down-td-img"><img
+                                    <tr class="drop-down__tr">
+                                       <td class="drop-down__td drop-down__td-img"><img
                                                src="img/content/menu-burger/menu_icon/greenery.png"
-                                               class="drop-down-icon"/></td>
-                                       <td class="drop-down-td drop-down-header">Зелень</td>
-                                       <td class="drop-down-td drop-down-weight">70 г.</td>
+                                               class="drop-down__icon"/></td>
+                                       <td class="drop-down__td drop-down__header">Зелень</td>
+                                       <td class="drop-down__td drop-down__weight">70 г.</td>
                                     </tr>
-                                    <tr class="drop-down-tr">
-                                       <td class="drop-down-td drop-down-td-img"><img
+                                    <tr class="drop-down__tr">
+                                       <td class="drop-down__td drop-down__td-img"><img
                                                src="img/content/menu-burger/menu_icon/sauce.png"
-                                               class="drop-down-icon"/></td>
-                                       <td class="drop-down-td drop-down-header">Соус</td>
-                                       <td class="drop-down-td drop-down-weight">150 г.</td>
+                                               class="drop-down__icon"/></td>
+                                       <td class="drop-down__td drop-down__header">Соус</td>
+                                       <td class="drop-down__td drop-down__weight">150 г.</td>
                                     </tr>
-                                    <tr class="drop-down-tr">
-                                       <td class="drop-down-td drop-down-td-img"><img
+                                    <tr class="drop-down__tr">
+                                       <td class="drop-down__td drop-down__td-img"><img
                                                src="img/content/menu-burger/menu_icon/cucumber.png"
-                                               class="drop-down-icon"/></td>
-                                       <td class="drop-down-td drop-down-header">Овощи</td>
-                                       <td class="drop-down-td drop-down-weight">200 г.</td>
+                                               class="drop-down__icon"/></td>
+                                       <td class="drop-down__td drop-down__header">Овощи</td>
+                                       <td class="drop-down__td drop-down__weight">200 г.</td>
                                     </tr>
-                                    <tr class="drop-down-tr">
-                                       <td class="drop-down-td drop-down-td-img"><img
+                                    <tr class="drop-down__tr">
+                                       <td class="drop-down__td drop-down__td-img"><img
                                                src="img/content/menu-burger/menu_icon/cheese.png"
-                                               class="drop-down-icon"/></td>
-                                       <td class="drop-down-td drop-down-header">Сыр</td>
-                                       <td class="drop-down-td drop-down-weight">80 г.</td>
+                                               class="drop-down__icon"/></td>
+                                       <td class="drop-down__td drop-down__header">Сыр</td>
+                                       <td class="drop-down__td drop-down__weight">80 г.</td>
                                     </tr>
                                     </tbody>
                                  </table>
@@ -256,12 +276,12 @@
                            </div>
                            <div class="carousel__content-calories">
                               1200
-                              <div class="calories-text">ккал</div>
+                              <div class="carousel__content-calories-text">ккал</div>
                            </div>
 
                         </div>
                         <div class="carousel__content">
-                           <h2 class="menu-burger__title section__title">Burger Burger Burger</h2>
+                           <h2 class="carousel__title">Burger Burger Burger</h2>
                            <div class="carousel__content-description">
                               Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками
                               нежнейшего сыра
@@ -281,50 +301,51 @@
                            <a href="#" class="composition__trigger">
                               <img src="img/content/menu-burger/burger_trigger.png" class="composition__trigger-pic"/>
                               <div class="composition__trigger-text">Состав</div>
-                              <div class="drop-down-menu">
-                                 <table class="drop-down-table">
+                              <div class="drop-down__menu">
+                                 <table class="drop-down__table">
                                     <tbody>
-                                    <tr class="drop-down-tr">
-                                       <td class="drop-down-td drop-down-td-img"><img
-                                               src="img/content/menu-burger/menu_icon/beef.png" class="drop-down-icon"/>
+                                    <tr class="drop-down__tr">
+                                       <td class="drop-down__td drop-down__td-img"><img
+                                               src="img/content/menu-burger/menu_icon/beef.png"
+                                               class="drop-down__icon"/>
                                        </td>
-                                       <td class="drop-down-td drop-down-header">Говядина</td>
-                                       <td class="drop-down-td drop-down-weight">300 г.</td>
+                                       <td class="drop-down__td drop-down__header">Говядина</td>
+                                       <td class="drop-down__td drop-down__weight">300 г.</td>
                                     </tr>
-                                    <tr class="drop-down-tr">
-                                       <td class="drop-down-td drop-down-td-img"><img
+                                    <tr class="drop-down__tr">
+                                       <td class="drop-down__td drop-down__td-img"><img
                                                src="img/content/menu-burger/menu_icon/burger.png"
-                                               class="drop-down-icon"/></td>
-                                       <td class="drop-down-td drop-down-header">Булочки</td>
-                                       <td class="drop-down-td drop-down-weight">100 г.</td>
+                                               class="drop-down__icon"/></td>
+                                       <td class="drop-down__td drop-down__header">Булочки</td>
+                                       <td class="drop-down__td drop-down__weight">100 г.</td>
                                     </tr>
-                                    <tr class="drop-down-tr">
-                                       <td class="drop-down-td drop-down-td-img"><img
+                                    <tr class="drop-down__tr">
+                                       <td class="drop-down__td drop-down__td-img"><img
                                                src="img/content/menu-burger/menu_icon/greenery.png"
-                                               class="drop-down-icon"/></td>
-                                       <td class="drop-down-td drop-down-header">Зелень</td>
-                                       <td class="drop-down-td drop-down-weight">70 г.</td>
+                                               class="drop-down__icon"/></td>
+                                       <td class="drop-down__td drop-down__header">Зелень</td>
+                                       <td class="drop-down__td drop-down__weight">70 г.</td>
                                     </tr>
-                                    <tr class="drop-down-tr">
-                                       <td class="drop-down-td drop-down-td-img"><img
+                                    <tr class="drop-down__tr">
+                                       <td class="drop-down__td drop-down__td-img"><img
                                                src="img/content/menu-burger/menu_icon/sauce.png"
-                                               class="drop-down-icon"/></td>
-                                       <td class="drop-down-td drop-down-header">Соус</td>
-                                       <td class="drop-down-td drop-down-weight">150 г.</td>
+                                               class="drop-down__icon"/></td>
+                                       <td class="drop-down__td drop-down__header">Соус</td>
+                                       <td class="drop-down__td drop-down__weight">150 г.</td>
                                     </tr>
-                                    <tr class="drop-down-tr">
-                                       <td class="drop-down-td drop-down-td-img"><img
+                                    <tr class="drop-down__tr">
+                                       <td class="drop-down__td drop-down__td-img"><img
                                                src="img/content/menu-burger/menu_icon/cucumber.png"
-                                               class="drop-down-icon"/></td>
-                                       <td class="drop-down-td drop-down-header">Овощи</td>
-                                       <td class="drop-down-td drop-down-weight">200 г.</td>
+                                               class="drop-down__icon"/></td>
+                                       <td class="drop-down__td drop-down__header">Овощи</td>
+                                       <td class="drop-down__td drop-down__weight">200 г.</td>
                                     </tr>
-                                    <tr class="drop-down-tr">
-                                       <td class="drop-down-td drop-down-td-img"><img
+                                    <tr class="drop-down__tr">
+                                       <td class="drop-down__td drop-down__td-img"><img
                                                src="img/content/menu-burger/menu_icon/cheese.png"
-                                               class="drop-down-icon"/></td>
-                                       <td class="drop-down-td drop-down-header">Сыр</td>
-                                       <td class="drop-down-td drop-down-weight">80 г.</td>
+                                               class="drop-down__icon"/></td>
+                                       <td class="drop-down__td drop-down__header">Сыр</td>
+                                       <td class="drop-down__td drop-down__weight">80 г.</td>
                                     </tr>
                                     </tbody>
                                  </table>
@@ -335,12 +356,12 @@
                            </div>
                            <div class="carousel__content-calories">
                               1200
-                              <div class="calories-text">ккал</div>
+                              <div class="carousel__content-calories-text">ккал</div>
                            </div>
 
                         </div>
                         <div class="carousel__content">
-                           <h2 class="menu-burger__title section__title">Dark BEEF</h2>
+                           <h2 class="carousel__title">Dark BEEF</h2>
                            <div class="carousel__content-description">
                               Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками
                               нежнейшего сыра
@@ -431,42 +452,58 @@
                      <a href="#" class="menu__item-header menu__item-header_meat">
                         <div class="menu__item-header-text">Для мясоедов</div>
                      </a>
-                     <div class="menu__item-description">Речевой акт редуцирует диалектический характер. Развивая эту
-                        тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает
-                        диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову, однако механизм
-                        сочленений неустойчив. Модальность высказывания, как справедливо считает И.Гальперин,
-                        пространственно выбирает метр.
-                        Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует
-                        конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш
-                        современник стал особенно чутко относиться к слову.
+                     <div class="menu__item-description">
+                        <div class="menu__item-description-text">Речевой акт редуцирует диалектический характер.
+                           Развивая эту
+                           тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект
+                           начинает
+                           диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову, однако
+                           механизм
+                           сочленений неустойчив. Модальность высказывания, как справедливо считает И.Гальперин,
+                           пространственно выбирает метр.
+                           Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует
+                           конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш
+                           современник стал особенно чутко относиться к слову.
+                        </div>
                      </div>
                   </li>
                   <li class="menu__item">
                      <a href="#" class="menu__item-header menu__item-header_vegan">
                         <div class="menu__item-header-text">Вегитарианское</div>
                      </a>
-                     <div class="menu__item-description">Речевой акт редуцирует диалектический характер. Развивая эту
-                        тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает
-                        диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову, однако механизм
-                        сочленений неустойчив. Модальность высказывания, как справедливо считает И.Гальперин,
-                        пространственно выбирает метр.
-                        Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует
-                        конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш
-                        современник стал особенно чутко относиться к слову.
-                     </div>
+                     <div class="menu__item-description">
+                        <div class="menu__item-description-text">Речевой акт редуцирует диалектический характер.
+                           Развивая эту
+                           тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект
+                           начинает
+                           диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову, однако
+                           механизм
+                           сочленений неустойчив. Модальность высказывания, как справедливо считает И.Гальперин,
+                           пространственно выбирает метр.
+                           Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует
+                           конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш
+                           современник стал особенно чутко относиться к слову.
+                        </
+                        <div>
+                        </div>
                   </li>
                   <li class="menu__item">
                      <a href="#" class="menu__item-header menu__item-header_diet">
                         <div class="menu__item-header-text">Диетическое</div>
                      </a>
-                     <div class="menu__item-description">Речевой акт редуцирует диалектический характер. Развивая эту
-                        тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает
-                        диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову, однако механизм
-                        сочленений неустойчив. Модальность высказывания, как справедливо считает И.Гальперин,
-                        пространственно выбирает метр.
-                        Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует
-                        конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш
-                        современник стал особенно чутко относиться к слову.
+                     <div class="menu__item-description">
+                        <div class="menu__item-description-text">Речевой акт редуцирует диалектический характер.
+                           Развивая эту
+                           тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект
+                           начинает
+                           диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову, однако
+                           механизм
+                           сочленений неустойчив. Модальность высказывания, как справедливо считает И.Гальперин,
+                           пространственно выбирает метр.
+                           Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует
+                           конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш
+                           современник стал особенно чутко относиться к слову.
+                        </div>
                      </div>
                   </li>
                </ul>
@@ -569,7 +606,7 @@
       <section class="section order">
          <div class="container order__container">
             <div class="section__title">Закажите доставку</div>
-            <form class="order__form-tag" id="order-form">
+            <form action="server.php" method="post" class="order__form-tag" id="order-form">
                <div class="order__form">
                   <div class="order__form-col">
                      <div class="order__form-row">
@@ -635,8 +672,8 @@
                            </label>
                         </div>
                         <div class="order__form-row">
-                           <input class="order__form-button" name="" type="submit" value="Заказать">
-                           <input class="order__form-button order__form-button_reset" name="" type="reset"
+                           <button class="order__form-button" name="submit" type="submit">Заказать</button>
+                           <input class="order__form-button order__form-button_reset" name="reset" type="reset"
                                   value="Очистить">
                         </div>
                      </div>
@@ -645,8 +682,8 @@
             </form>
          </div>
       </section>
-      <section class="section map">
-         <div class="map__img"></div>
+      <section class="section map-section">
+            <div id="map" class="map"></div>
       </section>
       <footer class="footer">
          <div class="container footer__container">
@@ -706,6 +743,8 @@
       <li class="nav-sidebar__item"><a href="#" class="nav-sidebar__link"></a></li>
    </ul>
 </div>
+
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 <script src="js/jquery-3.3.1.min.js"></script>
 <script src="js/main.js"></script>
 </body>

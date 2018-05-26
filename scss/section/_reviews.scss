@@ -53,6 +53,9 @@
   right: 0;
   padding: 10% 5%;
   opacity: 0;
+  @include tablets{
+    text-align: center;
+  }
 }
 
 .reviews__item:hover .reviews__description {
@@ -64,6 +67,9 @@
 .reviews__header {
   font-family: Gagalin;
   font-size: rem(14px);
+  @include phones{
+    font-size: rem(24px);
+  }
 }
 
 .reviews__text {
@@ -72,10 +78,23 @@
   font-size: rem(14px);
   margin-top: 10%;
   margin-right: 10%;
+  @include tablets{
+    margin-top: 2%;
+  }
+  @include phones{
+    display: none;
+  }
 }
 
 .reviews__btn {
   margin-top: 10%;
+  @include tablets{
+       padding-top: 0;
+       margin-top: 5%;
+     }
+  @include phones{
+    content: 'dgdjkgdjk';
+  }
 }
 
 .btn-link_reviews {

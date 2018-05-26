@@ -5,7 +5,7 @@
   position: relative;
 }
 
-.menu__content{
+.menu__content {
   display: flex;
   height: 100%;
 }
@@ -13,22 +13,25 @@
 .menu__title {
   padding-left: 10%;
   width: 30%;
-  @include tablets{
+  @include tablets {
     padding-left: 1%;
   }
 }
-.menu__accordion{
-  position:absolute;
+
+.menu__accordion {
+  position: absolute;
   width: 70%;
   top: 0;
   bottom: 0;
   right: 0;
 }
-.menu__list{
+
+.menu__list {
   display: flex;
   height: 100%;
   justify-content: flex-end;
 }
+
 .menu__item {
   display: flex;
 }
@@ -42,7 +45,7 @@
   transition: all .5s;
   -webkit-transition: all .5s;
 
-  &:before{
+  &:before {
     content: "";
     display: block;
     background: rgba($dark, .7);
@@ -50,7 +53,8 @@
     width: 100%;
   }
 }
-.menu__item-header-text{
+
+.menu__item-header-text {
   font: rem(40px) 'Gagalin';
   color: $white;
   transform: rotate(-90deg);
@@ -65,22 +69,35 @@
   }
 }
 
-.menu__item-description{
+.menu__item-description {
   width: 0;
   overflow: hidden;
   transition: all .5s;
   -webkit-transition: all .5s;
 }
 
-.menu__item_active{
-  & .menu__item-header-text{
+
+
+.menu__item_active {
+  & .menu__item-header-text {
     color: $yellow;
   }
-  & .menu__item-description{
+  & .menu__item-description {
     width: 100%;
     background: rgba($dark, .93);
     color: $white;
     font: 300 rem(14px) 'Ubuntu';
-    padding: 10% 5%;
+    @include phones{
+      width: rem(255px) !important;
+      font-size: rem(14px);
+    }
+  & .menu__item-description-text {
+    width: rem(450px);
+    padding: rem(30px) 5%;
+    @include phones{
+      width: rem(100px);
+      font-size: rem(14px);
+    }
+  }
   }
 }
