@@ -239,7 +239,7 @@ const performTransition = sectionEq => { // функция делает плав
     setTimeout(() => {
         inScroll = false;
         setActiveMenuItem(sectionEq);
-    }, 11300); // продолжительность анимации + 300ms - потому что закончится инерция
+    }, 1300); // продолжительность анимации + 300ms - потому что закончится инерция
 };
 
 const scrollToSection = direction =>{ //функция, которая расчитывает перемещение
