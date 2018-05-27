@@ -208,11 +208,16 @@ document.addEventListener('click', e => {
     //console.log(e.target);
 });
 
-/*
+
 //Scroll
 const sections = $(".section");
 const displays = $(".maincontent");
 let inScroll = false;
+
+const setActiveMenuItem = itemEq => {
+    $('.nav-sidebar__link').eq(itemEq).addClass('nav-sidebar__link_active')
+        .siblings().removeClass('nav-sidebar__link_active')
+}
 
 const performTransition = sectionEq => { // функция делает плавную анимацию до секции
     const position = `${sectionEq * -100}%`; // задает на сколько процентов нужно подвинуть секцию
@@ -231,6 +236,10 @@ const performTransition = sectionEq => { // функция делает плав
         transform: `translateY(${position})`,
         "-webkit-transform": `translateY(${position})`
     });
+    setTimeout(() => {
+        inScroll = false;
+        setActiveMenuItem(sectionEq);
+    }, 11300); // продолжительность анимации + 300ms - потому что закончится инерция
 };
 
 const scrollToSection = direction =>{ //функция, которая расчитывает перемещение
@@ -259,7 +268,9 @@ $(document).on('wheel', e => { //wheel – событие, которое отс
         scrollToSection("up");
     }
 });
-*/
+
+
+
 // Карта от Оли
 ymaps.ready(init);
 
@@ -374,7 +385,7 @@ function submitForm (ev) {
             status = msg.status;
 
         if (status === 'OK') {
-            form.append('<p class="success">' + mes + '</p>');
+            form.append('<p class="success>' + mes + '</p>');
         } else{
             form.append('<p class="error">' + mes + '</p>');
         }

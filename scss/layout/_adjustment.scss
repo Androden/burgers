@@ -1,8 +1,8 @@
 .wrapper {
   width: 100%;
-  min-height: 100%;
-  //height: 100%;
- // overflow: hidden;
+  //min-height: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
 .maincontent {
@@ -27,7 +27,7 @@
   //min-width: 940px;
   min-height: 650px;
   height: 100vh;
-  @include tablets{
+  @include tablets {
     min-width: 0;
   }
 }
@@ -59,7 +59,7 @@
 
 .nav-sidebar__item {
   margin-top: 5px;
-  &:first-child{
+  &:first-child {
     margin-top: 0;
   }
 }
@@ -69,7 +69,7 @@
   width: 16px;
   height: 16px;
   position: relative;
-  &:before{
+  &:before {
     content: "";
     display: block;
     width: 16px;
@@ -83,7 +83,7 @@
     -webkit-transition: .5s;
     transition: .5s;
   }
-  &:hover:before{
+  &:hover:before {
     border: 1px solid $white;
 
   }
@@ -101,7 +101,8 @@
     transform: translate(-50%, -50%);
   }
 }
-.nav-sidebar__link_active:before{
+
+.nav-sidebar__link_active:before {
   content: "";
   display: block;
   width: 16px;
