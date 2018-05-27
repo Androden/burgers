@@ -210,7 +210,7 @@ document.addEventListener('click', e => {
 
 
 //Scroll
-/*
+
 const sections = $(".section");
 const displays = $(".maincontent");
 let inScroll = false;
@@ -270,7 +270,6 @@ $(document).on('wheel', e => { //wheel – событие, которое отс
     }
 });
 
-*/
 
 // Карта от Оли
 ymaps.ready(init);
