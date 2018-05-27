@@ -1,11 +1,11 @@
 <?php
 
-    $name = $_POST['user-name'];
-    $email = $_POST['user-email'];
-    $pay = $_POST['pay-option'];
-    $message = $_POST['message'];
+    $name = $_POST['name'];
+    $email = $_POST['phone'];
+    $pay = $_POST['payment'];
+    $message = $_POST['comment'];
 
-    $disturb = $_POST['dont-disturb']; // 1 или null
+    $disturb = $_POST['callback']; // 1 или null
     $disturb = isset($disturb) ? 'НЕТ' : 'ДА';
 
     $mail_message = '

@@ -95,7 +95,7 @@
     width: rem(450px);
     padding: rem(30px) 5%;
     @include phones{
-      width: rem(100px);
+      width: 100%;
       font-size: rem(14px);
     }
   }

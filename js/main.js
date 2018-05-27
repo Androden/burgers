@@ -42,8 +42,38 @@ for (let i = 0; i < menuTrigger.length; i++) {
 const carouselList = document.querySelector('.carousel__list');
 const carouselArrowRight = document.querySelector('.carousel__arrow-right');
 const carouselArrowLeft = document.querySelector('.carousel__arrow-left');
+const carouselContainer = document.querySelector('.carousel__wrapper');
+let carouselSize = parseInt(getComputedStyle(carouselContainer).width);
+let start = 1;
 
-const minRight = 0;
+carouselArrowLeft.addEventListener('click', function (e) {
+    e.preventDefault();
+    let carouselCurrentLeft = (parseInt(getComputedStyle(carouselList).left));
+
+    if(start > 1 && carouselCurrentLeft % carouselSize == 0){
+        carouselList.style.left = carouselCurrentLeft + carouselSize + 'px';
+        start--;
+    } else if (carouselCurrentLeft % carouselSize == 0){
+        carouselList.style.left = carouselCurrentLeft - 2 * size + carouselSize + 'px';
+        start = 3;
+    }
+});
+
+carouselArrowRight.addEventListener('click', function (e) {
+   e.preventDefault();
+    let carouselCurrentLeft = (parseInt(getComputedStyle(carouselList).left));
+
+    if(start < 3 && carouselCurrentLeft % carouselSize == 0){
+        carouselList.style.left = carouselCurrentLeft - carouselSize + 'px';
+        start++;
+    } else if (carouselCurrentLeft % carouselSize == 0){
+        carouselList.style.left = 0 + 'px';
+        start = 1;
+    }
+});
+
+
+/* const minRight = 0;
 const maxRight = 1840;
 const step = 920;
 let currentRight = 0;
@@ -63,6 +93,7 @@ carouselArrowLeft.addEventListener("click", function () {
         carouselList.style.right = currentRight + "px";
     }
 });
+*/
 
 //Аккордеон от Маргариты
 
@@ -174,7 +205,7 @@ for (let i = 0; i < openBtn.length; i++) {
 }
 
 document.addEventListener('click', e => {
-    console.log(e.target);
+    //console.log(e.target);
 });
 
 /*
@@ -320,7 +351,15 @@ function init() {
 
 //Ajax от Димы
 
-$('.order__form-tag').on('submit', submitForm);
+$("#order__form").on('submit', submitForm);
+const fofm = $("#order__form");
+if(fofm){
+    console.log("Форма найдена");
+    console.log(fofm);
+}
+else {
+    console.log("Форма не найдена");
+}
 
 function submitForm (ev) {
     ev.preventDefault();

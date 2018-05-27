@@ -1,11 +1,15 @@
 <?php
 
-    $name = $_POST['user-name'];
-    $email = $_POST['user-email'];
-    $pay = $_POST['pay-option'];
-    $message = $_POST['message'];
+    $name = $_POST['name'];
+    $phone = $_POST['phone'];
+    $street = $_POST['street'];
+    $home = $_POST['home'];
+    $part = $_POST['part'];
+    $appt = $_POST['appt'];
+    $pay = $_POST['payment'];
+    $comment = $_POST['comment'];
 
-    $disturb = $_POST['dont-disturb']; // 1 или null
+    $disturb = $_POST['callback']; // 1 или null
     $disturb = isset($disturb) ? 'НЕТ' : 'ДА';
 
     $mail_message = '
@@ -17,9 +21,12 @@
         <h2>Заказ</h2>
         <ul>
             <li>Имя:' . $name . '</li>
-            <li>Email: ' . $email . '</li>
+            <li>Email: ' . $phone . '</li>
             <li>Способ оплаты: ' . $pay . '</li>
-            <li>Комментарий к заказу: ' . $message . '</li>
+            <li>Улица ' . $street . '</li>
+            <li>Улица ' . $home . '</li>
+            <li>Улица ' . $part . '</li>
+            <li>Комментарий к заказу: ' . $comment . '</li>
             <li>Нужно ли перезванивать клиенту: ' . $disturb . '</li>
         </ul>
     </body>

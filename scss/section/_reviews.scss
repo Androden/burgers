@@ -161,3 +161,17 @@
       opacity: 1;
     }
 }
+
+.btn-link_reviews-text {
+  display: inline-block;
+  @include phones {
+    display: none;
+  }
+}
+
+.btn-link_reviews-text_adaptive{
+  display: none;
+  @include phones{
+    display: inline-block;
+  }
+}

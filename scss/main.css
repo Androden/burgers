@@ -234,7 +234,7 @@ ul {
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgba(0, 0, 0, 0.89);
+  background: rgba(0, 0, 0, 0.99);
   z-index: 999; }
 
 .nav_adaptive {
@@ -594,6 +594,18 @@ ul {
   .popup__close:hover {
     opacity: 1; }
 
+.btn-link_reviews-text {
+  display: inline-block; }
+  @media screen and (max-width: 480px) {
+    .btn-link_reviews-text {
+      display: none; } }
+
+.btn-link_reviews-text_adaptive {
+  display: none; }
+  @media screen and (max-width: 480px) {
+    .btn-link_reviews-text_adaptive {
+      display: inline-block; } }
+
 .menu-burger {
   background: #f9b43b;
   /* Old browsers */
@@ -609,7 +621,8 @@ ul {
   align-items: center; }
 
 .carousel {
-  display: flex; }
+  display: flex;
+  max-width: 100%; }
 
 .carousel__arrow-left, .carousel__arrow-right {
   background: transparent;
@@ -617,6 +630,9 @@ ul {
   outline: none;
   display: inline-flex;
   align-self: center; }
+  @media screen and (max-width: 768px) {
+    .carousel__arrow-left, .carousel__arrow-right {
+      position: absolute; } }
   .carousel__arrow-left:after, .carousel__arrow-right:after {
     content: "";
     display: block;
@@ -626,8 +642,19 @@ ul {
   .carousel__arrow-left:hover, .carousel__arrow-right:hover {
     cursor: pointer; }
 
-.carousel__arrow-right:after {
-  background: url("../img/content/menu-burger/arrow-scroll_right.png") center center; }
+.carousel__arrow-left {
+  left: 10%; }
+  @media screen and (max-width: 480px) {
+    .carousel__arrow-left {
+      left: 5%; } }
+
+.carousel__arrow-right {
+  right: 10%; }
+  @media screen and (max-width: 480px) {
+    .carousel__arrow-right {
+      right: 5%; } }
+  .carousel__arrow-right:after {
+    background: url("../img/content/menu-burger/arrow-scroll_right.png") center center; }
 
 .carousel__content {
   display: flex;
@@ -761,7 +788,8 @@ ul {
 .drop-down__tr {
   width: 250px;
   vertical-align: center;
-  margin-bottom: 2%; }
+  margin-bottom: 2%;
+  color: #2f3234; }
   .drop-down__tr:last-child {
     margin-bottom: 0; }
 
@@ -980,7 +1008,7 @@ ul {
     padding: 1.875rem 5%; }
     @media screen and (max-width: 480px) {
       .menu__item_active .menu__item-description .menu__item-description-text {
-        width: 6.25rem;
+        width: 100%;
         font-size: 0.875rem; } }
 
 .order {
