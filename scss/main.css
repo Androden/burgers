@@ -77,7 +77,8 @@ ul {
 .maincontent {
   height: 100%;
   min-height: 650px;
-  transition: 1s; }
+  transition: 1s;
+  will-change: transform; }
 
 .container {
   max-width: 940px;
@@ -89,7 +90,6 @@ ul {
   flex-direction: column; }
 
 .section {
-  height: 100%;
   background-color: rgba(0, 0, 0, 0.31);
   min-height: 650px;
   height: 100vh; }
@@ -124,12 +124,13 @@ ul {
   .nav-sidebar__item:first-child {
     margin-top: 0; }
 
-.nav-sidebar__link {
+.nav-sidebar__item {
   display: block;
   width: 16px;
   height: 16px;
-  position: relative; }
-  .nav-sidebar__link:before {
+  position: relative;
+  cursor: pointer; }
+  .nav-sidebar__item:before {
     content: "";
     display: block;
     width: 16px;
@@ -142,9 +143,9 @@ ul {
     transform: translate(50%, 50%);
     -webkit-transition: .5s;
     transition: .5s; }
-  .nav-sidebar__link:hover:before {
+  .nav-sidebar__item:hover:before {
     border: 1px solid #ffffff; }
-  .nav-sidebar__link:after {
+  .nav-sidebar__item:after {
     content: "";
     display: block;
     width: 5px;
@@ -157,7 +158,7 @@ ul {
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%); }
 
-.nav-sidebar__link_active:before {
+.nav-sidebar__item_active:before {
   content: "";
   display: block;
   width: 16px;
@@ -170,6 +171,13 @@ ul {
   transform: translate(50%, 50%);
   -webkit-transition: .5s;
   transition: .5s; }
+
+.nav-sidebar__link {
+  display: block;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  z-index: 1000; }
 
 .hero {
   background: url("../img/bg/hero_bg.jpg") center center/cover no-repeat;
@@ -188,10 +196,11 @@ ul {
 .logo {
   display: block; }
 
-@media screen and (max-width: 768px) {
-  .logo__img {
-    position: absolute;
-    z-index: 9999; } }
+.logo__img {
+  /*  @include tablets{
+      position: absolute;
+      z-index: 9999;
+    }*/ }
 
 .header__menu {
   margin-right: 0.9375rem; }
@@ -211,7 +220,7 @@ ul {
   width: 24px;
   height: 22px;
   position: absolute;
-  top: 1.5%;
+  top: 3.7%;
   bottom: 0;
   left: 90%;
   background: #000000;
@@ -235,6 +244,7 @@ ul {
   bottom: 0;
   left: 0;
   right: 0;
+  padding: 1rem 0 0 1rem;
   background: rgba(0, 0, 0, 0.99);
   z-index: 999; }
 
@@ -633,7 +643,8 @@ ul {
   align-self: center; }
   @media screen and (max-width: 768px) {
     .carousel__arrow-left, .carousel__arrow-right {
-      position: absolute; } }
+      position: absolute;
+      z-index: 5555; } }
   .carousel__arrow-left:after, .carousel__arrow-right:after {
     content: "";
     display: block;
@@ -657,11 +668,23 @@ ul {
   .carousel__arrow-right:after {
     background: url("../img/content/menu-burger/arrow-scroll_right.png") center center; }
 
+/*.carousel__wrapper{
+  width: 940px;
+  @include tablets{
+    width: 768px;
+  }
+  @include phones{
+    width: 480px;
+  }
+}*/
 .carousel__content {
   display: flex;
   width: 50%;
   flex-direction: column;
   position: relative; }
+  @media screen and (max-width: 768px) {
+    .carousel__content {
+      width: 90%; } }
 
 .carousel__title {
   font-family: 'Gagalin';
@@ -753,6 +776,9 @@ ul {
 
 .carousel__order {
   display: flex; }
+  @media screen and (max-width: 768px) {
+    .carousel__order {
+      justify-content: center; } }
 
 .carousel__order-price {
   font-size: 4.375rem;
@@ -1178,13 +1204,20 @@ ul {
   width: 100%;
   background: url("../img/bg/footer_bg.jpg") center center no-repeat;
   background-size: cover;
-  display: flex; }
+  display: flex;
+  margin-top: -50px;
+  position: absolute;
+  min-height: 50px; }
   @media screen and (max-width: 768px) {
     .footer {
+      margin-top: -80px;
       justify-content: center;
       align-items: center;
       flex-direction: column;
       flex-wrap: wrap; } }
+  @media screen and (max-width: 480px) {
+    .footer {
+      margin-top: -70px; } }
 
 .footer__container {
   display: flex;

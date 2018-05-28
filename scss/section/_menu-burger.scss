@@ -24,8 +24,9 @@
   outline: none;
   display: inline-flex;
   align-self: center;
-  @include tablets{
+  @include tablets {
     position: absolute;
+    z-index: 5555;
   }
 
   &:after {
@@ -39,27 +40,41 @@
     cursor: pointer;
   }
 }
-.carousel__arrow-left{
+
+.carousel__arrow-left {
   left: 10%;
-  @include phones{
+  @include phones {
     left: 5%;
   }
 }
+
 .carousel__arrow-right {
   right: 10%;
-  @include phones{
+  @include phones {
     right: 5%;
   }
-  &:after{
-  background: url("../img/content/menu-burger/arrow-scroll_right.png") center center;
-}
+  &:after {
+    background: url("../img/content/menu-burger/arrow-scroll_right.png") center center;
+  }
 }
 
+/*.carousel__wrapper{
+  width: 940px;
+  @include tablets{
+    width: 768px;
+  }
+  @include phones{
+    width: 480px;
+  }
+}*/
 .carousel__content {
   display: flex;
   width: 50%;
   flex-direction: column;
   position: relative;
+  @include tablets{
+    width: 90%;
+  }
 }
 
 .carousel__title {
@@ -166,6 +181,9 @@
 
 .carousel__order {
   display: flex;
+  @include tablets{
+    justify-content: center;
+  }
 }
 
 .carousel__order-price {

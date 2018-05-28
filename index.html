@@ -14,7 +14,6 @@
    <meta name="theme-color" content="#ffffff">
    <link rel="stylesheet" href="css/normalize.css">
    <link rel="stylesheet" href="scss/main.css">
-   <link rel="stylesheet" href="scss/section/_hero.scss">
 
 </head>
 <body>
@@ -31,17 +30,17 @@
                <div class="header__menu">
                   <nav class="nav">
                      <ul class="nav__list">
-                        <li class="nav__item"><a href="" class="nav__link">о нас</a></li>
-                        <li class="nav__item"><a href="" class="nav__link">бургеры</a></li>
-                        <li class="nav__item"><a href="" class="nav__link">команда</a></li>
-                        <li class="nav__item"><a href="" class="nav__link">меню</a></li>
-                        <li class="nav__item"><a href="" class="nav__link">отзывы</a></li>
-                        <li class="nav__item"><a href="" class="nav__link">контакты</a></li>
+                        <li class="nav__item"><a href="" class="nav__link" data-scroll-to="1">о нас</a></li>
+                        <li class="nav__item"><a href="" class="nav__link" data-scroll-to="2">бургеры</a></li>
+                        <li class="nav__item"><a href="" class="nav__link" data-scroll-to="3">команда</a></li>
+                        <li class="nav__item"><a href="" class="nav__link" data-scroll-to="4">меню</a></li>
+                        <li class="nav__item"><a href="" class="nav__link" data-scroll-to="5">отзывы</a></li>
+                        <li class="nav__item"><a href="" class="nav__link" data-scroll-to="7">контакты</a></li>
                      </ul>
                   </nav>
                </div>
                <div class="header__btn">
-                  <a href="" class="btn-link">Заказать</a>
+                  <a href="" class="btn-link" data-scroll-to="6">Заказать</a>
                </div>
                <div class="header__menu-trigger">
                   <img src="img/content/hero/navicon.png" alt="drops" class=".header__menu-trigger-pic">
@@ -615,15 +614,6 @@
                   </div>
                </div>
             </li>
-            <div class="reviews__popup">
-               <div class="popup__content">
-                  <div class="popup__header">Константин Спилберг</div>
-                  <div class="popup__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно
-                     забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр
-                     таким расплавленным.
-                  </div>
-                  <a href="#" class="popup__close"></a></div>
-            </div>
          </ul>
       </section>
       <section class="section order">
@@ -755,6 +745,11 @@
    </div>
 </div>
 <div class="header__menu_adaptive">
+   <div class="header__logo">
+      <a href="" class="logo">
+         <img src="img/logo.svg" alt="logo" class="logo__img">
+      </a>
+   </div>
    <nav class="nav_adaptive">
       <ul class="nav__list_adaptive">
          <li class="nav__item_adaptive"><a href="" class="nav__link">о нас</a></li>
@@ -773,15 +768,24 @@
 </div>
 <div class="nav-sidebar">
    <ul class="nav-sidebar__list">
-      <li class="nav-sidebar__item"><a href="#" class="nav-sidebar__link nav-sidebar__link_active"></a></li>
-      <li class="nav-sidebar__item"><a href="#" class="nav-sidebar__link"></a></li>
-      <li class="nav-sidebar__item"><a href="#" class="nav-sidebar__link"></a></li>
-      <li class="nav-sidebar__item"><a href="#" class="nav-sidebar__link"></a></li>
-      <li class="nav-sidebar__item"><a href="#" class="nav-sidebar__link"></a></li>
-      <li class="nav-sidebar__item"><a href="#" class="nav-sidebar__link"></a></li>
-      <li class="nav-sidebar__item"><a href="#" class="nav-sidebar__link"></a></li>
-      <li class="nav-sidebar__item"><a href="#" class="nav-sidebar__link"></a></li>
+      <li class="nav-sidebar__item nav-sidebar__item_active"><a href="#" class="nav-sidebar__link" data-scroll-to="0"></a></li>
+      <li class="nav-sidebar__item"><a href="#" class="nav-sidebar__link" data-scroll-to="1"></a></li>
+      <li class="nav-sidebar__item"><a href="#" class="nav-sidebar__link" data-scroll-to="2"></a></li>
+      <li class="nav-sidebar__item"><a href="#" class="nav-sidebar__link" data-scroll-to="3"></a></li>
+      <li class="nav-sidebar__item"><a href="#" class="nav-sidebar__link" data-scroll-to="4"></a></li>
+      <li class="nav-sidebar__item"><a href="#" class="nav-sidebar__link" data-scroll-to="5"></a></li>
+      <li class="nav-sidebar__item"><a href="#" class="nav-sidebar__link" data-scroll-to="6"></a></li>
+      <li class="nav-sidebar__item"><a href="#" class="nav-sidebar__link" data-scroll-to="7"></a></li>
    </ul>
+</div>
+<div class="reviews__popup">
+   <div class="popup__content">
+      <div class="popup__header">Константин Спилберг</div>
+      <div class="popup__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно
+         забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр
+         таким расплавленным.
+      </div>
+      <a href="#" class="popup__close"></a></div>
 </div>
 
 <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>

@@ -21,10 +21,10 @@
 }
 
 .logo__img{
-  @include tablets{
+/*  @include tablets{
     position: absolute;
     z-index: 9999;
-  }
+  }*/
 }
 // антипаттерн
 .header__menu {
@@ -47,7 +47,7 @@ display: none;
     width: 24px;
     height: 22px;
     position: absolute;
-    top: 1.5%;
+    top: 3.7%;
     bottom: 0;
     left: 90%;
     background: $black;
@@ -73,6 +73,7 @@ display: none;
   bottom: 0;
   left: 0;
   right: 0;
+  padding: 1rem 0 0 1rem;
   background: rgba($black, .99);
   z-index: 999;
 }

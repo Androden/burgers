@@ -3,11 +3,18 @@
   background: url("../img/bg/footer_bg.jpg") center center no-repeat;
   background-size: cover;
   display: flex;
+  margin-top: -50px;
+  position: absolute;
+  min-height: 50px;
   @include tablets {
+    margin-top: -80px;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     flex-wrap: wrap;
+  }
+  @include phones{
+    margin-top: -70px;
   }
 }
 

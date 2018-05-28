@@ -37,7 +37,7 @@ for (let i = 0; i < menuTrigger.length; i++) {
     });
 }
 
-//Карусель от Сергея
+//Карусель от Маргариты
 
 const carouselList = document.querySelector('.carousel__list');
 const carouselArrowRight = document.querySelector('.carousel__arrow-right');
@@ -189,9 +189,10 @@ document.addEventListener("click", function (e) {
 
 //Отзывы
 
-var openBtn = document.querySelectorAll('.reviews__btn');
+var openBtn = document.querySelectorAll('.btn-link_reviews');
 var popup = document.querySelector('.reviews__popup');
 var closeBtn = document.querySelector('.popup__close');
+
 for (let i = 0; i < openBtn.length; i++) {
     openBtn[i].addEventListener('click', function (event) {
         event.preventDefault();
@@ -213,12 +214,16 @@ document.addEventListener('click', e => {
 
 const sections = $(".section");
 const displays = $(".maincontent");
+const navItem = $(".nav-sidebar__item");
 let inScroll = false;
 
 const setActiveMenuItem = itemEq => {
-    $('.nav-sidebar__link').eq(itemEq).addClass('nav-sidebar__link_active')
-        .siblings().removeClass('nav-sidebar__link_active')
-}
+    navItem//добавили активный класс у точки соответсвующей  секции
+        .eq(itemEq)
+        .addClass("nav-sidebar__item_active")
+        .siblings()
+        .removeClass("nav-sidebar__item_active");
+};
 
 const performTransition = sectionEq => { // функция делает плавную анимацию до секции
     const position = `${sectionEq * -100}%`; // задает на сколько процентов нужно подвинуть секцию
@@ -248,28 +253,44 @@ const scrollToSection = direction =>{ //функция, которая расч�
   const nextSection = activeSection.next();
   const prevSection = activeSection.prev();
 
-  switch (direction){
-        case "up":
-            performTransition(prevSection.index());
-            break;
-        case"down":
-            performTransition(nextSection.index());
-            break;
-  }
+    if (direction === "up" && prevSection.length) {
+        performTransition(prevSection.index());
+    }
+
+    if (direction === "down" && nextSection.length) {
+        performTransition(nextSection.index());
+    }
 };
 
-$(document).on('wheel', e => { //wheel – событие, которое отслеживает колесико мыши
-    const deltaY = e.originalEvent.deltaY; // показивает перемещение по Y
-    if (deltaY > 0) {
-        console.log('down');
-        scrollToSection("down");
-    }
-    if (deltaY < 0) {
-        console.log('up');
-        scrollToSection("up");
+$(document).on({
+    wheel: e => {//wheel – событие, которое отслеживает колесико мыши
+        const deltaY = e.originalEvent.deltaY;// показивает перемещение по Y
+        const direction = deltaY > 0 ? "down" : "up";
+
+        scrollToSection(direction);
+    },
+    keydown: e => {
+        switch (e.keyCode) {
+            case 40:
+                scrollToSection("down");
+                break;
+
+            case 38:
+                scrollToSection("up");
+                break;
+        }
     }
 });
 
+$('[data-scroll-to]').on('click', e => {
+    e.preventDefault();
+
+    const target = parseInt($(e.currentTarget).attr('data-scroll-to'));
+        console.log(target);
+
+    performTransition(target);
+
+});
 
 // Карта от Оли
 ymaps.ready(init);
@@ -386,6 +407,7 @@ function submitForm (ev) {
 
         if (status === 'OK') {
             form.append('<p class="success>' + mes + '</p>');
+            console.log(mes);
         } else{
             form.append('<p class="error">' + mes + '</p>');
         }
