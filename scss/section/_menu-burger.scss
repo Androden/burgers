@@ -98,12 +98,12 @@
 .carousel__list {
   display: flex;
   position: relative;
-  transition: right .3s;
+  transition: left .7s;
+  will-change: left;
 }
 
 .carousel__item {
   display: flex;
-  margin: 0.9375rem;
   min-width: 100%;
   @include tablets {
     justify-content: center;
