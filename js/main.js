@@ -146,7 +146,7 @@ var accordionMenu = document.getElementsByClassName("menu__accordion"),
     i;
 
 document.addEventListener("click", function (e) {
-    event.preventDefault();
+    //event.preventDefault();
     var contentWidth = '400px';
     if (e.target.classList.contains("menu__item-header") || e.target.classList.contains("menu__item-header-text")) {
 
